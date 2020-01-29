@@ -3,7 +3,6 @@ extends Control
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
 signal kill_choose
 
 # Called when the node enters the scene tree for the first time.
@@ -14,14 +13,15 @@ func _ready():
 func _process(delta):
 	pass
 
-
 func _on_Button_1_pressed():
 	emit_signal('kill_choose')
 	hide()
-	
 
 func _on_Button_2_pressed():
-	return 2
+	emit_signal('kill_choose')
+	hide()
 
 func _on_Button_3_pressed():
-	return 3
+	emit_signal('kill_choose')
+	hide()
+	

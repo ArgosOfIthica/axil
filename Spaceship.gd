@@ -9,10 +9,12 @@ func _ready():
 	pass
 func goto_spaceship():
 	var plantscene = load('res://Plant.tscn')
-	var plant = plantscene.instance()
+	"""var plant = plantscene.instance()
 	plant.position.x = 500
 	plant.position.y = 500
-	add_child(plant)
+	add_child(plant)"""
+	var plant = plantscene.Plant(species, stage)
+	
 
 
 #func render_plants():
