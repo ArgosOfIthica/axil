@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Choose.gd" type="Script" id=1]
 [ext_resource path="res://assets/seed.png" type="Texture" id=2]
-[ext_resource path="res://assets/sprout.png" type="Texture" id=3]
-[ext_resource path="res://assets/grown.png" type="Texture" id=4]
+[ext_resource path="res://assets/plant_grass_1.png" type="Texture" id=3]
+[ext_resource path="res://assets/plant_fire_1.png" type="Texture" id=4]
 
 [node name="Choose" type="Control"]
 anchor_right = 1.0
@@ -13,6 +13,9 @@ margin_top = 1.1049
 margin_right = 1081.53
 margin_bottom = 366.105
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button_1" type="Button" parent="."]
 margin_left = 28.1056
@@ -20,21 +23,30 @@ margin_top = 264.42
 margin_right = 340.106
 margin_bottom = 570.42
 icon = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button_2" type="Button" parent="."]
 anchor_right = 1.0
 margin_left = 398.0
-margin_top = 156.0
-margin_right = -1184.0
+margin_top = 182.0
+margin_right = -1096.0
 margin_bottom = 674.0
-icon = ExtResource( 3 )
+icon = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button_3" type="Button" parent="."]
-margin_left = 996.0
-margin_top = 159.0
-margin_right = 1520.0
-margin_bottom = 677.0
-icon = ExtResource( 4 )
+margin_left = 1037.75
+margin_top = 146.926
+margin_right = 1604.75
+margin_bottom = 641.926
+icon = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="."]
 margin_left = 48.0

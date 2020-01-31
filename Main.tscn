@@ -10,4 +10,6 @@ script = ExtResource( 1 )
 [node name="Choose" parent="." instance=ExtResource( 2 )]
 
 [node name="Spaceship" parent="." instance=ExtResource( 3 )]
-[connection signal="kill_choose" from="Choose" to="." method="_on_Choose_kill_choose"]
+[connection signal="kill_choose_plant_1" from="Choose" to="." method="_on_Choose_kill_choose_plant_1"]
+[connection signal="kill_choose_plant_2" from="Choose" to="." method="_on_Choose_kill_choose_plant_2"]
+[connection signal="kill_choose_plant_3" from="Choose" to="." method="_on_Choose_kill_choose_plant_3"]

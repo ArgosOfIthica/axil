@@ -5,9 +5,9 @@ extends Node2D
 # var b = "text"
 var current_scene = null
 
-var plant_1 = null
-var plant_2 = null
-var plant_3 = null
+
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,6 +21,21 @@ func to_spaceship():
 	$Spaceship.goto_spaceship()
 
 
-
-func _on_Choose_kill_choose():
+func add_plant_to_inventory(species, stage):
+	var plantscene = load('res://Plant.tscn')
+	var plant = plantscene.instance()
+	var plant_class = plant.Plant.new(species, stage)
+	$Spaceship.inventory = plant_class
 	to_spaceship()
+	
+
+func _on_Choose_kill_choose_plant_1():
+	add_plant_to_inventory($Choose.choice_1, 'seedling')
+
+
+func _on_Choose_kill_choose_plant_2():
+	add_plant_to_inventory($Choose.choice_2, 'seedling')
+
+
+func _on_Choose_kill_choose_plant_3():
+	add_plant_to_inventory($Choose.choice_3, 'seedling')
