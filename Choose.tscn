@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Choose.gd" type="Script" id=1]
-[ext_resource path="res://assets/seed.png" type="Texture" id=2]
-[ext_resource path="res://assets/plant_grass_1.png" type="Texture" id=3]
-[ext_resource path="res://assets/plant_fire_1.png" type="Texture" id=4]
+[ext_resource path="res://assets/Test Resolutions/GrassSeed256.png" type="Texture" id=2]
+[ext_resource path="res://assets/Test Resolutions/WaterSeed256.png" type="Texture" id=3]
+[ext_resource path="res://assets/Test Resolutions/FireSeed256.png" type="Texture" id=4]
 
 [node name="Choose" type="Control"]
 anchor_right = 1.0
@@ -18,32 +18,32 @@ __meta__ = {
 }
 
 [node name="Button_1" type="Button" parent="."]
-margin_left = 28.1056
-margin_top = 264.42
-margin_right = 340.106
-margin_bottom = 570.42
-icon = ExtResource( 2 )
+margin_left = 50.0
+margin_top = 275.0
+margin_right = 293.0
+margin_bottom = 537.0
+icon = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button_2" type="Button" parent="."]
 anchor_right = 1.0
-margin_left = 398.0
-margin_top = 182.0
-margin_right = -1096.0
-margin_bottom = 674.0
+margin_left = 375.0
+margin_top = 275.0
+margin_right = -1463.0
+margin_bottom = 537.0
 icon = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button_3" type="Button" parent="."]
-margin_left = 1037.75
-margin_top = 146.926
-margin_right = 1604.75
-margin_bottom = 641.926
-icon = ExtResource( 3 )
+margin_left = 700.0
+margin_top = 273.0
+margin_right = 968.0
+margin_bottom = 535.0
+icon = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

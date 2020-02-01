@@ -24,8 +24,8 @@ class Plant:
 	
 	func species_to_path():
 		if self.species == "water" :
-			self.seedling_image_path = "res://assets/plant_water_1.png"
+			self.seedling_image_path = "res://assets/Test Resolutions/WaterSeed128.png"
 		elif self.species == "grass":
-			self.seedling_image_path = "res://assets/plant_grass_1.png"
+			self.seedling_image_path = "res://assets/Test Resolutions/GrassSeed128.png"
 		elif self.species == "fire":
-			self.seedling_image_path = "res://assets/plant_fire_1.png"
+			self.seedling_image_path = "res://assets/Test Resolutions/FireSeed128.png"

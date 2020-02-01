@@ -25,7 +25,7 @@ func add_plant_to_inventory(species, stage):
 	var plantscene = load('res://Plant.tscn')
 	var plant = plantscene.instance()
 	var plant_class = plant.Plant.new(species, stage)
-	$Spaceship.inventory = plant_class
+	$Spaceship.seedling = plant_class
 	to_spaceship()
 	
 
