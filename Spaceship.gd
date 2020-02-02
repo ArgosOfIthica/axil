@@ -1,60 +1,62 @@
 extends Control
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-var plant_1 = null
-var plant_2 = null
-var plant_3 = null
+
+var pot1= null
+var pot2 = null
+var pot3 = null
 var seedling = null
 var water = null
 var soil = null
-var activated = null
+var selected = null
 
-# Called when the node enters the scene tree for the first time.
+#External API
+
+
+func goto_spaceship():
+	prepare_ship_rendering()
+	show()
+	
+func add_seedling(plant_object):
+	seedling = plant_object
+
+
+#Internal API
+
 func _ready():
 	hide()
-	
-func goto_spaceship():
-	show()
-	$Seed.set_button_icon(load(seedling.seedling_image_path))
-	#var plantscene = load('res://Plant.tscn')
-	"""var plant = plantscene.instance()
-	plant.position.x = 500
-	plant.position.y = 500
-	add_child(plant)"""
-#	var plant = plantscene.Plant(species, stage)
-	
-
-
-#func render_plants():
-	#Main.plant_1
-	
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 func _on_Seed_pressed():
-	activated = "seed"
-
+	selected = "seed"
 
 func _on_Pot_1_pressed():
-	if activated == "seed":
-		plant_1 = seedling
-		seedling = null
-		activated = null
-
+	select_seed(1)
 
 func _on_Pot_2_pressed():
-	if activated == "seed":
-		plant_2 = seedling
-		seedling = null
-		activated = null
-
+	select_seed(2)
 
 func _on_Pot_3_pressed():
-	if activated == "seed":
-		plant_3 = seedling
+	select_seed(3)
+
+func select_seed(pot):
+	if selected == "seed":
+		if pot == 1:
+			pot1 = seedling
+		elif pot == 2:
+			pot2 = seedling
+		elif pot == 3:
+			pot3 = seedling
 		seedling = null
-		activated = null
+		selected = null
+		prepare_ship_rendering()
+
+func prepare_ship_rendering():
+	if seedling != null:
+		$Seed.set_button_icon(load(seedling.seedling_image_path))
+	else:
+		$Seed.set_button_icon(load("res://icon.png"))
+	if pot1 != null:
+		$Pot_1.set_button_icon(load(pot1.stage_2_image_path))
+	if pot2 != null:
+		$Pot_2.set_button_icon(load(pot2.stage_2_image_path))
+	if pot3 != null:
+		$Pot_3.set_button_icon(load(pot3.stage_2_image_path))
