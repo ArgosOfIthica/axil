@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Choose.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Spaceship.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/shitwater.png" type="Texture" id=4]
+[ext_resource path="res://assets/Test Resolutions/shitwater96x143.png" type="Texture" id=5]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -16,6 +18,29 @@ margin_left = 2.57123
 margin_top = -37.6272
 margin_right = 2.57123
 margin_bottom = -37.6272
+
+[node name="ThirstyPot1" type="Sprite" parent="Spaceship"]
+position = Vector2( 320.897, 260.566 )
+scale = Vector2( 0.148159, 0.167276 )
+texture = ExtResource( 4 )
+
+[node name="ThirstyPot2" type="Sprite" parent="Spaceship"]
+position = Vector2( 646.247, 260.566 )
+scale = Vector2( 0.148159, 0.167276 )
+texture = ExtResource( 4 )
+
+[node name="ThirstyPot3" type="Sprite" parent="Spaceship"]
+position = Vector2( 970.901, 262.782 )
+scale = Vector2( 0.148159, 0.167276 )
+texture = ExtResource( 4 )
+
+[node name="Button" type="Button" parent="Spaceship"]
+margin_left = 800.0
+margin_top = 63.0
+margin_right = 908.0
+margin_bottom = 212.0
+icon = ExtResource( 5 )
 [connection signal="kill_choose_plant_1" from="Choose" to="." method="_on_Choose_kill_choose_plant_1"]
 [connection signal="kill_choose_plant_2" from="Choose" to="." method="_on_Choose_kill_choose_plant_2"]
 [connection signal="kill_choose_plant_3" from="Choose" to="." method="_on_Choose_kill_choose_plant_3"]
+[connection signal="pressed" from="Spaceship/Button" to="Spaceship" method="_on_Water_pressed"]
