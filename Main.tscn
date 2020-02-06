@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Choose.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Spaceship.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/shitwater.png" type="Texture" id=4]
 [ext_resource path="res://assets/Test Resolutions/shitwater96x143.png" type="Texture" id=5]
+[ext_resource path="res://assets/Main_Screen_BG.png" type="Texture" id=6]
+[ext_resource path="res://assets/Audio/Podington_Bear_-_09_-_Leafeaters.wav" type="AudioStream" id=7]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -40,6 +42,17 @@ margin_top = 63.0
 margin_right = 908.0
 margin_bottom = 212.0
 icon = ExtResource( 5 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Spaceship"]
+
+[node name="Main_Screen_BG" type="Sprite" parent="Spaceship/ParallaxBackground"]
+position = Vector2( 516.54, 301.221 )
+scale = Vector2( 0.535832, 0.46601 )
+texture = ExtResource( 6 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Spaceship"]
+stream = ExtResource( 7 )
+autoplay = true
 [connection signal="kill_choose_plant_1" from="Choose" to="." method="_on_Choose_kill_choose_plant_1"]
 [connection signal="kill_choose_plant_2" from="Choose" to="." method="_on_Choose_kill_choose_plant_2"]
 [connection signal="kill_choose_plant_3" from="Choose" to="." method="_on_Choose_kill_choose_plant_3"]
