@@ -48,12 +48,14 @@ func _on_Pot_3_pressed():
 
 func select_seed(pot):
 	if selected == "seed":
+		seedling.plant()
 		if pot == 1:
 			pot1 = seedling
 		elif pot == 2:
 			pot2 = seedling
 		elif pot == 3:
 			pot3 = seedling
+		
 		seedling = null
 		selected = null
 		prepare_ship_rendering()

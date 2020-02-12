@@ -18,7 +18,7 @@ func _on_Choose_kill_choose_plant_3():
 
 
 
-#Interal API
+#Internal API
 
 func _ready():
 	current_scene = "choose"
@@ -29,7 +29,7 @@ func to_spaceship():
 
 
 func add_plant_to_inventory(species, stage):
-	$Spaceship.seedling = instantiate_plant(species, stage)
+	$Spaceship.add_seedling(instantiate_plant(species, stage))
 	to_spaceship()
 	
 func instantiate_plant(species, stage):
