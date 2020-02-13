@@ -1,27 +1,33 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Choose.gd" type="Script" id=1]
 [ext_resource path="res://assets/Test Resolutions/GrassSeed256.png" type="Texture" id=2]
 [ext_resource path="res://assets/Test Resolutions/WaterSeed256.png" type="Texture" id=3]
 [ext_resource path="res://assets/Test Resolutions/FireSeed256.png" type="Texture" id=4]
+[ext_resource path="res://assets/Fonts/oswald/Oswald-Regular.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+font_data = ExtResource( 5 )
 
 [node name="Choose" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -0.474121
-margin_top = 1.1049
-margin_right = 1081.53
-margin_bottom = 366.105
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -8.0
+margin_bottom = 8.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button_1" type="Button" parent="."]
-margin_left = 50.0
-margin_top = 275.0
-margin_right = 293.0
-margin_bottom = 537.0
+margin_left = 155.989
+margin_top = 413.329
+margin_right = 423.989
+margin_bottom = 675.329
+rect_scale = Vector2( 1.7, 1.7 )
 icon = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -29,30 +35,34 @@ __meta__ = {
 
 [node name="Button_2" type="Button" parent="."]
 anchor_right = 1.0
-margin_left = 364.182
-margin_top = 265.727
-margin_right = -2367.82
-margin_bottom = 527.727
+margin_left = 715.157
+margin_top = 413.769
+margin_right = -2016.85
+margin_bottom = 675.769
+rect_scale = Vector2( 1.7, 1.7 )
 icon = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button_3" type="Button" parent="."]
-margin_left = 700.0
-margin_top = 273.0
-margin_right = 968.0
-margin_bottom = 535.0
+margin_left = 1279.77
+margin_top = 407.013
+margin_right = 1547.77
+margin_bottom = 669.013
+rect_scale = Vector2( 1.7, 1.7 )
 icon = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = 48.0
-margin_top = 21.0
-margin_right = 1879.0
-margin_bottom = 128.0
+margin_left = 37.7926
+margin_top = 36.7707
+margin_right = 1868.79
+margin_bottom = 141.771
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Your robotic explorer has reported back! It has found 3 seeds of interest, but it only has room to store one."
 align = 1
 valign = 1
