@@ -29,10 +29,10 @@ __meta__ = {
 
 [node name="Button_2" type="Button" parent="."]
 anchor_right = 1.0
-margin_left = 375.0
-margin_top = 275.0
-margin_right = -1463.0
-margin_bottom = 537.0
+margin_left = 364.182
+margin_top = 265.727
+margin_right = -2367.82
+margin_bottom = 527.727
 icon = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -51,9 +51,14 @@ __meta__ = {
 [node name="Label" type="Label" parent="."]
 margin_left = 48.0
 margin_top = 21.0
-margin_right = 751.0
-margin_bottom = 69.0
+margin_right = 1879.0
+margin_bottom = 128.0
 text = "Your robotic explorer has reported back! It has found 3 seeds of interest, but it only has room to store one."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Button_1" to="." method="_on_Button_1_pressed" flags=3]
 [connection signal="pressed" from="Button_2" to="." method="_on_Button_2_pressed"]
 [connection signal="button_up" from="Button_3" to="." method="_on_Button_3_button_up"]

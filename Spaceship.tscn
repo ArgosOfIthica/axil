@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Spaceship.gd" type="Script" id=1]
-[ext_resource path="res://assets/Test Resolutions/Pot256.png" type="Texture" id=2]
+[ext_resource path="res://assets/Pots/Pot_Dirt_Empty.png" type="Texture" id=2]
 [ext_resource path="res://assets/shitwater.png" type="Texture" id=3]
 [ext_resource path="res://assets/Test Resolutions/shitwater96x143.png" type="Texture" id=4]
 [ext_resource path="res://assets/Main_Screen_BG.png" type="Texture" id=5]
@@ -16,65 +16,65 @@ __meta__ = {
 }
 
 [node name="Seed" type="Button" parent="."]
-margin_left = 35.0506
-margin_top = 76.8593
-margin_right = 120.051
-margin_bottom = 158.859
+margin_left = 45.2099
+margin_top = 217.992
+margin_right = 130.21
+margin_bottom = 299.992
 icon = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Pot_1" type="Button" parent="."]
-margin_left = 452.804
-margin_top = 914.806
-margin_right = 720.804
-margin_bottom = 1176.81
+margin_left = 168.179
+margin_top = 326.455
+margin_right = 687.179
+margin_bottom = 1255.45
 icon = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Pot_2" type="Button" parent="."]
-margin_left = 915.605
-margin_top = 912.156
-margin_right = 1183.61
-margin_bottom = 1174.16
+margin_left = 721.363
+margin_top = 336.182
+margin_right = 1240.36
+margin_bottom = 1265.18
 icon = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Pot_3" type="Button" parent="."]
-margin_left = 1383.71
-margin_top = 908.181
-margin_right = 1651.71
-margin_bottom = 1170.18
+margin_left = 1276.74
+margin_top = 338.177
+margin_right = 1795.74
+margin_bottom = 1267.18
 icon = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ThirstyPot1" type="Sprite" parent="."]
-position = Vector2( 728.339, 901.845 )
+position = Vector2( 565.174, 971.471 )
 scale = Vector2( 0.148159, 0.167276 )
 texture = ExtResource( 3 )
 
 [node name="ThirstyPot2" type="Sprite" parent="."]
-position = Vector2( 1188.32, 897.121 )
+position = Vector2( 1139.35, 971.058 )
 scale = Vector2( 0.148159, 0.167276 )
 texture = ExtResource( 3 )
 
 [node name="ThirstyPot3" type="Sprite" parent="."]
-position = Vector2( 1654.7, 892.251 )
+position = Vector2( 1701.07, 980.341 )
 scale = Vector2( 0.148159, 0.167276 )
 texture = ExtResource( 3 )
 
 [node name="Water" type="Button" parent="."]
-margin_left = 800.0
-margin_top = 63.0
-margin_right = 908.0
-margin_bottom = 212.0
+margin_left = 38.1179
+margin_top = 25.8997
+margin_right = 146.118
+margin_bottom = 174.9
 icon = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -83,6 +83,7 @@ __meta__ = {
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Spaceship_BG" type="Sprite" parent="ParallaxBackground"]
+visible = false
 position = Vector2( 963.359, 642.121 )
 texture = ExtResource( 5 )
 
