@@ -3,7 +3,7 @@
 [ext_resource path="res://Spaceship.gd" type="Script" id=1]
 [ext_resource path="res://assets/Pots/Pot_Dirt_Empty.png" type="Texture" id=2]
 [ext_resource path="res://assets/shitwater.png" type="Texture" id=3]
-[ext_resource path="res://assets/Test Resolutions/shitwater96x143.png" type="Texture" id=4]
+[ext_resource path="res://assets/Test Resolutions/shitwater128x191.png" type="Texture" id=4]
 [ext_resource path="res://assets/Main_Screen_BG.png" type="Texture" id=5]
 [ext_resource path="res://assets/Audio/Podington_Bear_-_09_-_Leafeaters.wav" type="AudioStream" id=6]
 
@@ -16,41 +16,41 @@ __meta__ = {
 }
 
 [node name="Seed" type="Button" parent="."]
-margin_left = 45.2099
-margin_top = 217.992
-margin_right = 130.21
-margin_bottom = 299.992
+margin_left = 47.1072
+margin_top = 254.042
+margin_right = 132.107
+margin_bottom = 336.042
 icon = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Pot_1" type="Button" parent="."]
-margin_left = 168.179
-margin_top = 326.455
-margin_right = 687.179
-margin_bottom = 1255.45
-icon = ExtResource( 2 )
+[node name="Pot_1" type="TextureButton" parent="."]
+margin_left = 167.757
+margin_top = 342.848
+margin_right = 674.757
+margin_bottom = 1265.85
+texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Pot_2" type="Button" parent="."]
-margin_left = 721.363
-margin_top = 336.182
-margin_right = 1240.36
-margin_bottom = 1265.18
-icon = ExtResource( 2 )
+[node name="Pot_2" type="TextureButton" parent="."]
+margin_left = 751.363
+margin_top = 356.708
+margin_right = 1258.36
+margin_bottom = 1279.71
+texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Pot_3" type="Button" parent="."]
-margin_left = 1276.74
-margin_top = 338.177
-margin_right = 1795.74
-margin_bottom = 1267.18
-icon = ExtResource( 2 )
+[node name="Pot_3" type="TextureButton" parent="."]
+margin_left = 1307.3
+margin_top = 366.195
+margin_right = 1814.3
+margin_bottom = 1289.19
+texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -70,12 +70,12 @@ position = Vector2( 1701.07, 980.341 )
 scale = Vector2( 0.148159, 0.167276 )
 texture = ExtResource( 3 )
 
-[node name="Water" type="Button" parent="."]
-margin_left = 38.1179
-margin_top = 25.8997
-margin_right = 146.118
-margin_bottom = 174.9
-icon = ExtResource( 4 )
+[node name="Water" type="TextureButton" parent="."]
+margin_left = 28.1006
+margin_top = 13.2816
+margin_right = 156.101
+margin_bottom = 204.282
+texture_normal = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

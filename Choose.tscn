@@ -22,40 +22,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button_1" type="Button" parent="."]
-margin_left = 155.989
-margin_top = 413.329
-margin_right = 423.989
-margin_bottom = 675.329
-rect_scale = Vector2( 1.7, 1.7 )
-icon = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button_2" type="Button" parent="."]
-anchor_right = 1.0
-margin_left = 715.157
-margin_top = 413.769
-margin_right = -2016.85
-margin_bottom = 675.769
-rect_scale = Vector2( 1.7, 1.7 )
-icon = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button_3" type="Button" parent="."]
-margin_left = 1279.77
-margin_top = 407.013
-margin_right = 1547.77
-margin_bottom = 669.013
-rect_scale = Vector2( 1.7, 1.7 )
-icon = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Label" type="Label" parent="."]
 margin_left = 37.7926
 margin_top = 36.7707
@@ -69,7 +35,39 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Button_1" to="." method="_on_Button_1_pressed" flags=3]
-[connection signal="pressed" from="Button_2" to="." method="_on_Button_2_pressed"]
-[connection signal="button_up" from="Button_3" to="." method="_on_Button_3_button_up"]
+
+[node name="Button_3" type="TextureButton" parent="."]
+margin_left = 1355.52
+margin_top = 365.425
+margin_right = 1611.52
+margin_bottom = 621.425
+rect_scale = Vector2( 1.7, 1.7 )
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_2" type="TextureButton" parent="."]
+margin_left = 737.527
+margin_top = 398.812
+margin_right = 993.527
+margin_bottom = 654.812
+rect_scale = Vector2( 1.7, 1.7 )
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_1" type="TextureButton" parent="."]
+margin_left = 116.258
+margin_top = 393.738
+margin_right = 372.258
+margin_bottom = 649.738
+rect_scale = Vector2( 1.7, 1.7 )
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Button_3" to="." method="_on_Button_3_pressed"]
+[connection signal="pressed" from="Button_2" to="." method="_on_Button_2_pressed"]
+[connection signal="pressed" from="Button_1" to="." method="_on_Button_1_pressed"]

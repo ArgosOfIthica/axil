@@ -76,12 +76,12 @@ func prepare_ship_rendering():
 	else:
 		$Seed.set_button_icon(load("res://icon.png"))
 	if pot1 != null:
-		$Pot_1.set_button_icon(load(pot1.stage_2_image_path))
+		$Pot_1.set_normal_texture(load(pot1.stage_2_image_path))
 		$ThirstyPot1.show()
 	if pot2 != null:
-		$Pot_2.set_button_icon(load(pot2.stage_2_image_path))
+		$Pot_2.set_normal_texture(load(pot2.stage_2_image_path))
 		$ThirstyPot2.show()
 	if pot3 != null:
-		$Pot_3.set_button_icon(load(pot3.stage_2_image_path))
+		$Pot_3.set_normal_texture(load(pot3.stage_2_image_path))
 		$ThirstyPot3.show()
 		
