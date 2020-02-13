@@ -24,7 +24,6 @@ class Plant:
 	
 	func set_epoch():
 		self.epoch = OS.get_unix_time()
-		print(self.epoch)
 		
 	func species_to_path():
 		if self.species == "water" :
