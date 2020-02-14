@@ -16,65 +16,65 @@ __meta__ = {
 }
 
 [node name="Seed" type="Button" parent="."]
-margin_left = 47.1072
-margin_top = 254.042
-margin_right = 132.107
-margin_bottom = 336.042
+margin_left = 48.734
+margin_top = 284.951
+margin_right = 133.734
+margin_bottom = 366.951
 icon = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Pot_1" type="TextureButton" parent="."]
-margin_left = 167.757
-margin_top = 342.848
-margin_right = 674.757
-margin_bottom = 1265.85
+margin_left = 141.729
+margin_top = 349.355
+margin_right = 648.729
+margin_bottom = 1272.36
 texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Pot_2" type="TextureButton" parent="."]
-margin_left = 751.363
-margin_top = 356.708
-margin_right = 1258.36
-margin_bottom = 1279.71
+margin_left = 723.437
+margin_top = 351.83
+margin_right = 1230.44
+margin_bottom = 1274.83
 texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Pot_3" type="TextureButton" parent="."]
-margin_left = 1307.3
-margin_top = 366.195
-margin_right = 1814.3
-margin_bottom = 1289.19
+margin_left = 1281.27
+margin_top = 355.625
+margin_right = 1788.27
+margin_bottom = 1278.63
 texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ThirstyPot1" type="Sprite" parent="."]
-position = Vector2( 565.174, 971.471 )
+position = Vector2( 539.146, 977.978 )
 scale = Vector2( 0.148159, 0.167276 )
 texture = ExtResource( 3 )
 
 [node name="ThirstyPot2" type="Sprite" parent="."]
-position = Vector2( 1139.35, 971.058 )
+position = Vector2( 1113.32, 977.565 )
 scale = Vector2( 0.148159, 0.167276 )
 texture = ExtResource( 3 )
 
 [node name="ThirstyPot3" type="Sprite" parent="."]
-position = Vector2( 1701.07, 980.341 )
+position = Vector2( 1675.04, 986.848 )
 scale = Vector2( 0.148159, 0.167276 )
 texture = ExtResource( 3 )
 
 [node name="Water" type="TextureButton" parent="."]
 margin_left = 28.1006
-margin_top = 13.2816
+margin_top = 40.9367
 margin_right = 156.101
-margin_bottom = 204.282
+margin_bottom = 231.937
 texture_normal = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -83,7 +83,8 @@ __meta__ = {
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Spaceship_BG" type="Sprite" parent="ParallaxBackground"]
-position = Vector2( 963.359, 642.121 )
+visible = false
+position = Vector2( 958.479, 642.121 )
 texture = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
