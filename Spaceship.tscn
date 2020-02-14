@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Spaceship.gd" type="Script" id=1]
-[ext_resource path="res://assets/Pots/Pot_Dirt_Empty.png" type="Texture" id=2]
+[ext_resource path="res://assets/pots/pot_dirt_empty.png" type="Texture" id=2]
 [ext_resource path="res://assets/shitwater.png" type="Texture" id=3]
-[ext_resource path="res://assets/Test Resolutions/shitwater128x191.png" type="Texture" id=4]
-[ext_resource path="res://assets/Main_Screen_BG.png" type="Texture" id=5]
-[ext_resource path="res://assets/Audio/Podington_Bear_-_09_-_Leafeaters.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/icons/watericon.png" type="Texture" id=4]
+[ext_resource path="res://assets/main_screen_bg.png" type="Texture" id=5]
+[ext_resource path="res://assets/audio/podington_bear_-_09_-_leafeaters.wav" type="AudioStream" id=6]
 
 [sub_resource type="ImageTexture" id=1]
 

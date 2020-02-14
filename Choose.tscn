@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Choose.gd" type="Script" id=1]
-[ext_resource path="res://assets/Test Resolutions/GrassSeed256.png" type="Texture" id=2]
-[ext_resource path="res://assets/Test Resolutions/WaterSeed256.png" type="Texture" id=3]
-[ext_resource path="res://assets/Test Resolutions/FireSeed256.png" type="Texture" id=4]
-[ext_resource path="res://assets/Fonts/oswald/Oswald-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/test_resolutions/grassseed256.png" type="Texture" id=2]
+[ext_resource path="res://assets/test_resolutions/waterseed256.png" type="Texture" id=3]
+[ext_resource path="res://assets/test_resolutions/fireseed256.png" type="Texture" id=4]
+[ext_resource path="res://assets/fonts/oswald/Oswald-Regular.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 42

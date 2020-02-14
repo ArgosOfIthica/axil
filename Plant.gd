@@ -9,11 +9,12 @@ class Plant:
 	var seedling_image_path = null
 	var stage_2_image_path = null
 	var epoch = null
-	
+	var assets = "res://assets/plants/"
 	
 	func _init(species, stage):
 		self.species = species 
 		self.stage = stage
+		
 		species_to_path()
 		
 	func plant():
@@ -26,12 +27,5 @@ class Plant:
 		self.epoch = OS.get_unix_time()
 		
 	func species_to_path():
-		if self.species == "water" :
-			self.seedling_image_path = "res://assets/Test Resolutions/WaterSeed128.png"
-			self.stage_2_image_path = "res://assets/waterplant02.png"
-		elif self.species == "grass":
-			self.seedling_image_path = "res://assets/Test Resolutions/GrassSeed128.png"
-			self.stage_2_image_path = "res://assets/grass_state_2.png"
-		elif self.species == "fire":
-			self.seedling_image_path = "res://assets/Test Resolutions/FireSeed128.png"
-			self.stage_2_image_path = "res://assets/fire_state_2.png"
+		self.seedling_image_path = self.assets + self.species + "/1.png"
+		self.stage_2_image_path = self.assets + self.species + "/2.png"
