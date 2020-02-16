@@ -71,11 +71,14 @@ scale = Vector2( 0.148159, 0.167276 )
 texture = ExtResource( 3 )
 
 [node name="Water" type="TextureButton" parent="."]
-margin_left = 28.1006
-margin_top = 40.9367
-margin_right = 156.101
-margin_bottom = 231.937
+margin_left = 1546.0
+margin_top = 97.0
+margin_right = 2258.0
+margin_bottom = 917.0
+rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 4 )
+expand = true
+stretch_mode = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -94,4 +97,5 @@ autoplay = true
 [connection signal="pressed" from="Pot_1" to="." method="_on_Pot_1_pressed"]
 [connection signal="pressed" from="Pot_2" to="." method="_on_Pot_2_pressed"]
 [connection signal="pressed" from="Pot_3" to="." method="_on_Pot_3_pressed"]
+[connection signal="mouse_entered" from="Water" to="." method="_on_Water_mouse_entered"]
 [connection signal="pressed" from="Water" to="." method="_on_Water_pressed"]

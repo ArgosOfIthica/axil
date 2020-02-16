@@ -9,14 +9,13 @@ var water = null
 var soil = null
 var selected = null
 
+
+
 #External API
 
 
 func goto_spaceship():
 	prepare_ship_rendering()
-	$ThirstyPot1.hide()
-	$ThirstyPot2.hide()
-	$ThirstyPot3.hide()
 	show()
 	
 func add_seedling(plant_object):
@@ -27,7 +26,8 @@ func add_seedling(plant_object):
 
 func _ready():
 	hide()
-
+	
+	
 func _on_Seed_pressed():
 	selected = "seed"
 	
@@ -63,25 +63,36 @@ func select_seed(pot):
 func water_plant(pot):
 	if selected == "water":
 		if pot == 1:
-			$ThirstyPot1.hide()
+			pot1.water_the_plant()
 		if pot == 2:
-			$ThirstyPot2.hide()
+			pot2.water_the_plant()
 		if pot == 3:
-			$ThirstyPot3.hide()
+			pot3.water_the_plant()
 		selected = null
 
 func prepare_ship_rendering():
+	$ThirstyPot1.hide()
+	$ThirstyPot2.hide()
+	$ThirstyPot3.hide()
 	if seedling != null:
 		$Seed.set_button_icon(load(seedling.seedling_image_path))
 	else:
 		$Seed.set_button_icon(load("res://icon.png"))
 	if pot1 != null:
 		$Pot_1.set_normal_texture(load(pot1.stage_2_image_path))
-		$ThirstyPot1.show()
+		pot1.poll_for_needs()
+		if pot1.needs_water:
+			$ThirstyPot1.show()
 	if pot2 != null:
 		$Pot_2.set_normal_texture(load(pot2.stage_2_image_path))
-		$ThirstyPot2.show()
+		pot2.poll_for_needs()
+		if pot2.needs_water:
+			$ThirstyPot2.show()
 	if pot3 != null:
 		$Pot_3.set_normal_texture(load(pot3.stage_2_image_path))
-		$ThirstyPot3.show()
-		
+		pot3.poll_for_needs()
+		if pot3.needs_water:
+			$ThirstyPot3.show()
+
+func _on_Main_new_frame():
+	prepare_ship_rendering()

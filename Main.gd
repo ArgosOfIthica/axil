@@ -3,6 +3,8 @@ extends Node2D
 var current_scene = null
 
 
+signal new_frame
+
 #External API
 
 func _on_Choose_kill_choose_plant_1():
@@ -22,6 +24,9 @@ func _on_Choose_kill_choose_plant_3():
 
 func _ready():
 	current_scene = "choose"
+	
+func _process(delta):
+	emit_signal('new_frame')
 
 func to_spaceship():
 	current_scene = "spaceship"
@@ -36,5 +41,6 @@ func instantiate_plant(species, stage):
 	var plantscene = load('res://Plant.tscn')
 	var plant = plantscene.instance()
 	return plant.Plant.new(species, stage)
+
 
 
