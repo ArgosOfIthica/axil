@@ -96,3 +96,7 @@ func prepare_ship_rendering():
 
 func _on_Main_new_frame():
 	prepare_ship_rendering()
+
+
+func _on_map_button_pressed():
+	print ("map time!!")
