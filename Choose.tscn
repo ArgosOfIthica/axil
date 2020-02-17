@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Choose.gd" type="Script" id=1]
-[ext_resource path="res://assets/test_resolutions/grassseed256.png" type="Texture" id=2]
-[ext_resource path="res://assets/test_resolutions/waterseed256.png" type="Texture" id=3]
-[ext_resource path="res://assets/test_resolutions/fireseed256.png" type="Texture" id=4]
+[ext_resource path="res://assets/plants/fire/1.png" type="Texture" id=2]
+[ext_resource path="res://assets/plants/water/1.png" type="Texture" id=3]
+[ext_resource path="res://assets/plants/grass/1.png" type="Texture" id=4]
 [ext_resource path="res://assets/fonts/oswald/Oswald-Regular.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=1]
@@ -37,32 +37,32 @@ __meta__ = {
 }
 
 [node name="Button_3" type="TextureButton" parent="."]
-margin_left = 1355.52
-margin_top = 365.425
-margin_right = 1611.52
-margin_bottom = 621.425
-rect_scale = Vector2( 1.7, 1.7 )
-texture_normal = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button_2" type="TextureButton" parent="."]
-margin_left = 737.527
-margin_top = 398.812
-margin_right = 993.527
-margin_bottom = 654.812
+margin_left = 1173.02
+margin_top = 123.461
+margin_right = 1728.02
+margin_bottom = 612.461
 rect_scale = Vector2( 1.7, 1.7 )
 texture_normal = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Button_2" type="TextureButton" parent="."]
+margin_left = 462.754
+margin_top = 128.14
+margin_right = 1062.75
+margin_bottom = 614.14
+rect_scale = Vector2( 1.7, 1.7 )
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Button_1" type="TextureButton" parent="."]
-margin_left = 116.258
-margin_top = 393.738
-margin_right = 372.258
-margin_bottom = 649.738
+margin_left = -294.0
+margin_top = -213.0
+margin_right = 357.0
+margin_bottom = 710.0
 rect_scale = Vector2( 1.7, 1.7 )
 texture_normal = ExtResource( 3 )
 __meta__ = {
