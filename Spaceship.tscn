@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Spaceship.gd" type="Script" id=1]
 [ext_resource path="res://assets/pots/pot_dirt_empty.png" type="Texture" id=2]
-[ext_resource path="res://assets/shitwater.png" type="Texture" id=3]
-[ext_resource path="res://assets/icons/watericon.png" type="Texture" id=4]
+[ext_resource path="res://assets/Icons/WaterDrop.png" type="Texture" id=3]
 [ext_resource path="res://assets/main_screen_bg.png" type="Texture" id=5]
 [ext_resource path="res://assets/audio/podington_bear_-_09_-_leafeaters.wav" type="AudioStream" id=6]
 
@@ -16,10 +15,10 @@ __meta__ = {
 }
 
 [node name="Seed" type="Button" parent="."]
-margin_left = 48.734
-margin_top = 284.951
-margin_right = 133.734
-margin_bottom = 366.951
+margin_left = 50.0
+margin_top = 225.0
+margin_right = 135.0
+margin_bottom = 307.0
 icon = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -56,27 +55,27 @@ __meta__ = {
 }
 
 [node name="ThirstyPot1" type="Sprite" parent="."]
-position = Vector2( 539.146, 977.978 )
-scale = Vector2( 0.148159, 0.167276 )
+position = Vector2( 550, 950 )
+scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 3 )
 
 [node name="ThirstyPot2" type="Sprite" parent="."]
-position = Vector2( 1113.32, 977.565 )
-scale = Vector2( 0.148159, 0.167276 )
+position = Vector2( 1135, 950 )
+scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 3 )
 
 [node name="ThirstyPot3" type="Sprite" parent="."]
-position = Vector2( 1675.04, 986.848 )
-scale = Vector2( 0.148159, 0.167276 )
+position = Vector2( 1700, 950 )
+scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 3 )
 
 [node name="Water" type="TextureButton" parent="."]
-margin_left = 1546.0
-margin_top = 97.0
-margin_right = 2258.0
-margin_bottom = 917.0
-rect_scale = Vector2( 0.5, 0.5 )
-texture_normal = ExtResource( 4 )
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 443.0
+margin_bottom = 447.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 3 )
 expand = true
 stretch_mode = 3
 __meta__ = {
@@ -96,5 +95,4 @@ autoplay = true
 [connection signal="pressed" from="Pot_1" to="." method="_on_Pot_1_pressed"]
 [connection signal="pressed" from="Pot_2" to="." method="_on_Pot_2_pressed"]
 [connection signal="pressed" from="Pot_3" to="." method="_on_Pot_3_pressed"]
-[connection signal="mouse_entered" from="Water" to="." method="_on_Water_mouse_entered"]
 [connection signal="pressed" from="Water" to="." method="_on_Water_pressed"]

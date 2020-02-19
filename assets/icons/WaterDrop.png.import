@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon_water.png-aea6df38cb6df048056a6267ed02f3d7.stex"
+path="res://.import/WaterDrop.png-5addf545c17b4512d868c74a6f8e6db2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/icon_water.png"
-dest_files=[ "res://.import/icon_water.png-aea6df38cb6df048056a6267ed02f3d7.stex" ]
+source_file="res://assets/Icons/WaterDrop.png"
+dest_files=[ "res://.import/WaterDrop.png-5addf545c17b4512d868c74a6f8e6db2.stex" ]
 
 [params]
 

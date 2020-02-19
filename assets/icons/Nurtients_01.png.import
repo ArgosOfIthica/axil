@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon_water.png-aea6df38cb6df048056a6267ed02f3d7.stex"
+path="res://.import/Nurtients_01.png-fc8cb921213aa00cd78f94f7d5e1941f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/icon_water.png"
-dest_files=[ "res://.import/icon_water.png-aea6df38cb6df048056a6267ed02f3d7.stex" ]
+source_file="res://assets/Icons/Nurtients_01.png"
+dest_files=[ "res://.import/Nurtients_01.png-fc8cb921213aa00cd78f94f7d5e1941f.stex" ]
 
 [params]
 

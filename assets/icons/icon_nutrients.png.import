@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon_nutrients.png-d9c860532ba3859be2aa89966ec8f2b5.stex"
+path="res://.import/icon_nutrients.png-493fcc1439fa3b8cb5bdb616ad6d9911.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/icon_nutrients.png"
-dest_files=[ "res://.import/icon_nutrients.png-d9c860532ba3859be2aa89966ec8f2b5.stex" ]
+source_file="res://assets/Icons/icon_nutrients.png"
+dest_files=[ "res://.import/icon_nutrients.png-493fcc1439fa3b8cb5bdb616ad6d9911.stex" ]
 
 [params]
 
