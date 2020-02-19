@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/podington_bear_-_09_-_leafeaters.wav-1b765ffdf47cb8cefa31875dc7d86912.sample"
+path="res://.import/podington_bear_-_09_-_leafeaters.wav-5266577d6a08c11103b58a447295471b.sample"
 
 [deps]
 
-source_file="res://assets/Audio/podington_bear_-_09_-_leafeaters.wav"
-dest_files=[ "res://.import/podington_bear_-_09_-_leafeaters.wav-1b765ffdf47cb8cefa31875dc7d86912.sample" ]
+source_file="res://assets/audio/podington_bear_-_09_-_leafeaters.wav"
+dest_files=[ "res://.import/podington_bear_-_09_-_leafeaters.wav-5266577d6a08c11103b58a447295471b.sample" ]
 
 [params]
 
