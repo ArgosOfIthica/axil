@@ -2,3 +2,6 @@ Android/
 *.keystore
 binary/
 .import/
+*.import
+axil/.import/
+Axil/.import/
