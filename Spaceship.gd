@@ -33,6 +33,9 @@ func _on_Seed_pressed():
 	
 func _on_Water_pressed():
 	selected = "water"
+	
+func _on_Nutrients_pressed():
+	selected = "nutrients"
 
 func _on_Pot_1_pressed():
 	select_seed(1)
@@ -69,11 +72,24 @@ func water_plant(pot):
 		if pot == 3:
 			pot3.water_the_plant()
 		selected = null
+		
+func add_nutrients(pot):
+	if selected == "nutrients":
+		if pot == 1:
+			pass
+		if pot == 2:
+			pass
+		if pot == 3:
+			pass
+		selected = null
 
 func prepare_ship_rendering():
 	$ThirstyPot1.hide()
 	$ThirstyPot2.hide()
 	$ThirstyPot3.hide()
+	$NutrientsPot1.hide()
+	$NutrientsPot2.hide()
+	$NutrientsPot3.hide()
 	if seedling != null:
 		$Seed.set_button_icon(load(seedling.seedling_image_path))
 	else:
