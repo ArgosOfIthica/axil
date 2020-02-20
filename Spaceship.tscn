@@ -1,10 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Spaceship.gd" type="Script" id=1]
 [ext_resource path="res://assets/pots/pot_dirt_empty.png" type="Texture" id=2]
 [ext_resource path="res://assets/Icons/WaterDrop.png" type="Texture" id=3]
+[ext_resource path="res://assets/icons/icon_send_earth.png" type="Texture" id=4]
 [ext_resource path="res://assets/main_screen_bg.png" type="Texture" id=5]
 [ext_resource path="res://assets/audio/podington_bear_-_09_-_leafeaters.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/icons/icon_nutrients.png" type="Texture" id=7]
+[ext_resource path="res://assets/icons/icon_map.png" type="Texture" id=8]
+[ext_resource path="res://assets/icons/icon_Encyclopedia.png" type="Texture" id=9]
 
 [sub_resource type="ImageTexture" id=1]
 
@@ -55,26 +59,22 @@ __meta__ = {
 }
 
 [node name="ThirstyPot1" type="Sprite" parent="."]
-position = Vector2( 550, 950 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 540.433, 993.05 )
 texture = ExtResource( 3 )
 
 [node name="ThirstyPot2" type="Sprite" parent="."]
-position = Vector2( 1135, 950 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 1139.78, 997.833 )
 texture = ExtResource( 3 )
 
 [node name="ThirstyPot3" type="Sprite" parent="."]
-position = Vector2( 1700, 950 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 1700, 1005.01 )
 texture = ExtResource( 3 )
 
 [node name="Water" type="TextureButton" parent="."]
-margin_left = 50.0
-margin_top = 50.0
-margin_right = 443.0
-margin_bottom = 447.0
-rect_scale = Vector2( 0.3, 0.3 )
+margin_left = 47.7416
+margin_top = 40.8667
+margin_right = 182.742
+margin_bottom = 188.867
 texture_normal = ExtResource( 3 )
 expand = true
 stretch_mode = 3
@@ -85,12 +85,50 @@ __meta__ = {
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Spaceship_BG" type="Sprite" parent="ParallaxBackground"]
+visible = false
 position = Vector2( 958.479, 642.121 )
 texture = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
 autoplay = true
+
+[node name="icon_journal" type="TextureButton" parent="."]
+margin_left = 1765.04
+margin_top = 23.9166
+margin_right = 1893.04
+margin_bottom = 214.917
+texture_normal = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="icon_send_earth" type="TextureButton" parent="."]
+margin_left = 1765.04
+margin_top = 231.991
+margin_right = 1893.04
+margin_bottom = 422.991
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="icon_map" type="TextureButton" parent="."]
+margin_left = 1741.13
+margin_top = 452.023
+margin_right = 1908.13
+margin_bottom = 643.023
+texture_normal = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="icon_nutrients" type="TextureButton" parent="."]
+margin_left = 31.0916
+margin_top = 284.607
+margin_right = 198.092
+margin_bottom = 475.607
+texture_normal = ExtResource( 7 )
 [connection signal="pressed" from="Seed" to="." method="_on_Seed_pressed"]
 [connection signal="pressed" from="Pot_1" to="." method="_on_Pot_1_pressed"]
 [connection signal="pressed" from="Pot_2" to="." method="_on_Pot_2_pressed"]
