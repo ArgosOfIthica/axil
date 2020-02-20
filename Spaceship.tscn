@@ -1,11 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Spaceship.gd" type="Script" id=1]
 [ext_resource path="res://assets/pots/pot_dirt_empty.png" type="Texture" id=2]
-[ext_resource path="res://assets/Icons/icon_water.png" type="Texture" id=3]
+[ext_resource path="res://assets/icons/icon_water.png" type="Texture" id=3]
 [ext_resource path="res://assets/icons/icon_send_earth.png" type="Texture" id=4]
 [ext_resource path="res://assets/main_screen_bg.png" type="Texture" id=5]
-[ext_resource path="res://assets/audio/podington_bear_-_09_-_leafeaters.wav" type="AudioStream" id=6]
 [ext_resource path="res://assets/icons/icon_nutrients.png" type="Texture" id=7]
 [ext_resource path="res://assets/icons/icon_map.png" type="Texture" id=8]
 [ext_resource path="res://assets/icons/icon_Encyclopedia.png" type="Texture" id=9]
@@ -86,12 +85,10 @@ __meta__ = {
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Spaceship_BG" type="Sprite" parent="ParallaxBackground"]
-visible = false
 position = Vector2( 958.479, 642.121 )
 texture = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
 autoplay = true
 
 [node name="icon_journal" type="TextureButton" parent="."]
