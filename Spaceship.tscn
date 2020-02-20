@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Spaceship.gd" type="Script" id=1]
 [ext_resource path="res://assets/pots/pot_dirt_empty.png" type="Texture" id=2]
-[ext_resource path="res://assets/Icons/WaterDrop.png" type="Texture" id=3]
+[ext_resource path="res://assets/Icons/icon_water.png" type="Texture" id=3]
 [ext_resource path="res://assets/icons/icon_send_earth.png" type="Texture" id=4]
 [ext_resource path="res://assets/main_screen_bg.png" type="Texture" id=5]
 [ext_resource path="res://assets/audio/podington_bear_-_09_-_leafeaters.wav" type="AudioStream" id=6]
@@ -20,10 +20,11 @@ __meta__ = {
 
 [node name="Seed" type="Button" parent="."]
 margin_left = 50.0
-margin_top = 225.0
+margin_top = 425.0
 margin_right = 135.0
-margin_bottom = 307.0
+margin_bottom = 507.0
 icon = SubResource( 1 )
+expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -125,9 +126,9 @@ __meta__ = {
 
 [node name="icon_nutrients" type="TextureButton" parent="."]
 margin_left = 31.0916
-margin_top = 284.607
+margin_top = 204.607
 margin_right = 198.092
-margin_bottom = 475.607
+margin_bottom = 395.607
 texture_normal = ExtResource( 7 )
 [connection signal="pressed" from="Seed" to="." method="_on_Seed_pressed"]
 [connection signal="pressed" from="Pot_1" to="." method="_on_Pot_1_pressed"]
