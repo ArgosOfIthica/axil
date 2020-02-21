@@ -6,7 +6,7 @@ var pot2 = null
 var pot3 = null
 var seedling = null
 var water = null
-var soil = null
+var nutrients = null
 var selected = null
 
 
@@ -40,14 +40,17 @@ func _on_Nutrients_pressed():
 func _on_Pot_1_pressed():
 	select_seed(1)
 	water_plant(1)
+	add_nutrients(1)
 
 func _on_Pot_2_pressed():
 	select_seed(2)
 	water_plant(2)
+	add_nutrients(2)
 
 func _on_Pot_3_pressed():
 	select_seed(3)
 	water_plant(3)
+	add_nutrients(3)
 
 func select_seed(pot):
 	if selected == "seed":
@@ -76,11 +79,11 @@ func water_plant(pot):
 func add_nutrients(pot):
 	if selected == "nutrients":
 		if pot == 1:
-			pass
+			pot1.nutrient_the_plant()
 		if pot == 2:
-			pass
+			pot2.nutrient_the_plant()
 		if pot == 3:
-			pass
+			pot3.nutrient_the_plant()
 		selected = null
 
 func prepare_ship_rendering():
@@ -99,16 +102,22 @@ func prepare_ship_rendering():
 		pot1.poll_for_needs()
 		if pot1.needs_water:
 			$ThirstyPot1.show()
+		if pot1.needs_nutrients:
+			$NutrientsPot1.show()
 	if pot2 != null:
 		$Pot_2.set_normal_texture(load(pot2.stage_2_image_path))
 		pot2.poll_for_needs()
 		if pot2.needs_water:
 			$ThirstyPot2.show()
+		if pot2.needs_nutrients:
+			$NutrientsPot2.show()
 	if pot3 != null:
 		$Pot_3.set_normal_texture(load(pot3.stage_2_image_path))
 		pot3.poll_for_needs()
 		if pot3.needs_water:
 			$ThirstyPot3.show()
+		if pot3.needs_nutrients:
+			$NutrientsPot3.show()
 
 func _on_Main_new_frame():
 	prepare_ship_rendering()
