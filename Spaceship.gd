@@ -115,4 +115,8 @@ func _on_Main_new_frame():
 
 
 func _on_map_button_pressed():
-	print ("map time!!")
+	pass
+
+
+func _on_SendToEarth_pressed():
+	pass
