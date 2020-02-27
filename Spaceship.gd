@@ -50,8 +50,7 @@ func handle_selection(chosen_pot):
 
 func select_seed(chosen_pot):
 	if selected == "seed":
-		seedling.plant()
-		pots[chosen_pot] = seedling
+		pots[chosen_pot].plant = seedling
 		seedling = null
 		selected = null
 		prepare_ship_rendering()
@@ -68,7 +67,6 @@ func add_nutrients(chosen_pot):
 
 func prepare_ship_rendering():
 	if seedling != null:
-		print(seedling)
 		$Seed.set_button_icon(load(seedling.seedling_image_path))
 	else:
 		$Seed.set_button_icon(load("res://icon.png"))

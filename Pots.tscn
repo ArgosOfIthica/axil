@@ -9,19 +9,19 @@
 script = ExtResource( 4 )
 
 [node name="Button" type="TextureButton" parent="."]
-margin_left = 141.729
-margin_top = 349.355
-margin_right = 648.729
-margin_bottom = 1272.36
+margin_left = -253.516
+margin_top = -760.695
+margin_right = 253.484
+margin_bottom = 162.31
 texture_normal = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Thirst" type="Sprite" parent="."]
-position = Vector2( 541.219, 1007.67 )
+position = Vector2( 159.182, -143.1 )
 texture = ExtResource( 3 )
 
 [node name="Nutrients" type="Sprite" parent="."]
-position = Vector2( 227.849, 1009.29 )
+position = Vector2( -158.847, -141.479 )
 texture = ExtResource( 2 )

@@ -82,6 +82,7 @@ __meta__ = {
 }
 
 [node name="Pot_1" type="TextureButton" parent="."]
+visible = false
 margin_left = 141.729
 margin_top = 349.355
 margin_right = 648.729
@@ -92,6 +93,7 @@ __meta__ = {
 }
 
 [node name="Pot_2" type="TextureButton" parent="."]
+visible = false
 margin_left = 723.437
 margin_top = 351.83
 margin_right = 1230.44
@@ -102,6 +104,7 @@ __meta__ = {
 }
 
 [node name="Pot_3" type="TextureButton" parent="."]
+visible = false
 margin_left = 1281.27
 margin_top = 355.625
 margin_right = 1788.27

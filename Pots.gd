@@ -3,7 +3,7 @@ extends Node2D
 var plant = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	print("amihere?")
 
 func report_plant():
 	if plant != null:
