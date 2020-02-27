@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/pots/pot_dirt_empty.png" type="Texture" id=1]
+[ext_resource path="res://assets/icons/icon_nutrients.png" type="Texture" id=2]
+[ext_resource path="res://assets/icons/icon_water.png" type="Texture" id=3]
+[ext_resource path="res://Pots.gd" type="Script" id=4]
+
+[node name="Pot" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Button" type="TextureButton" parent="."]
+margin_left = 141.729
+margin_top = 349.355
+margin_right = 648.729
+margin_bottom = 1272.36
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Thirst" type="Sprite" parent="."]
+position = Vector2( 541.219, 1007.67 )
+texture = ExtResource( 3 )
+
+[node name="Nutrients" type="Sprite" parent="."]
+position = Vector2( 227.849, 1009.29 )
+texture = ExtResource( 2 )

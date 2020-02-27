@@ -1,15 +1,11 @@
 extends Control
 
 
-var pot1= null
-var pot2 = null
-var pot3 = null
+var pots = [null, null, null]
 var seedling = null
 var water = null
 var nutrients = null
 var selected = null
-
-
 
 #External API
 
@@ -17,14 +13,14 @@ var selected = null
 func goto_spaceship():
 	prepare_ship_rendering()
 	show()
-	
-func add_seedling(plant_object):
-	seedling = plant_object
-
 
 #Internal API
 
 func _ready():
+	var potscene = load('res://Plant.tscn')
+	pots[0] = potscene.instance()
+	pots[1] = potscene.instance()
+	pots[2] = potscene.instance()
 	hide()
 	
 	
@@ -38,86 +34,44 @@ func _on_Nutrients_pressed():
 	selected = "nutrients"
 
 func _on_Pot_1_pressed():
-	select_seed(1)
-	water_plant(1)
-	add_nutrients(1)
+	handle_selection(0)
 
 func _on_Pot_2_pressed():
-	select_seed(2)
-	water_plant(2)
-	add_nutrients(2)
+	handle_selection(1)
 
 func _on_Pot_3_pressed():
-	select_seed(3)
-	water_plant(3)
-	add_nutrients(3)
+	handle_selection(2)
 
-func select_seed(pot):
+func handle_selection(chosen_pot):
+	if seedling != null:
+		select_seed(chosen_pot)
+		water_plant(chosen_pot)
+		add_nutrients(chosen_pot)
+
+func select_seed(chosen_pot):
 	if selected == "seed":
 		seedling.plant()
-		if pot == 1:
-			pot1 = seedling
-		elif pot == 2:
-			pot2 = seedling
-		elif pot == 3:
-			pot3 = seedling
-		
+		pots[chosen_pot] = seedling
 		seedling = null
 		selected = null
 		prepare_ship_rendering()
 		
-func water_plant(pot):
+func water_plant(chosen_pot):
 	if selected == "water":
-		if pot == 1:
-			pot1.water_the_plant()
-		if pot == 2:
-			pot2.water_the_plant()
-		if pot == 3:
-			pot3.water_the_plant()
+		pots[chosen_pot].water_the_plant()
 		selected = null
 		
-func add_nutrients(pot):
+func add_nutrients(chosen_pot):
 	if selected == "nutrients":
-		if pot == 1:
-			pot1.nutrient_the_plant()
-		if pot == 2:
-			pot2.nutrient_the_plant()
-		if pot == 3:
-			pot3.nutrient_the_plant()
+		pots[chosen_pot].nutrient_the_plant()
 		selected = null
 
 func prepare_ship_rendering():
-	$ThirstyPot1.hide()
-	$ThirstyPot2.hide()
-	$ThirstyPot3.hide()
-	$NutrientsPot1.hide()
-	$NutrientsPot2.hide()
-	$NutrientsPot3.hide()
 	if seedling != null:
+		print(seedling)
 		$Seed.set_button_icon(load(seedling.seedling_image_path))
 	else:
 		$Seed.set_button_icon(load("res://icon.png"))
-	if pot1 != null:
-		$Pot_1.set_normal_texture(load(pot1.stage_2_image_path))
-		pot1.poll_for_needs()
-		if pot1.needs_water:
-			$ThirstyPot1.show()
-		if pot1.needs_nutrients:
-			$NutrientsPot1.show()
-	if pot2 != null:
-		$Pot_2.set_normal_texture(load(pot2.stage_2_image_path))
-		pot2.poll_for_needs()
-		if pot2.needs_water:
-			$ThirstyPot2.show()
-		if pot2.needs_nutrients:
-			$NutrientsPot2.show()
-	if pot3 != null:
-		$Pot_3.set_normal_texture(load(pot3.stage_2_image_path))
-		pot3.poll_for_needs()
-		if pot3.needs_water:
-			$ThirstyPot3.show()
-		if pot3.needs_nutrients:
-			$NutrientsPot3.show()
 
 func _on_Main_new_frame():
 	prepare_ship_rendering()

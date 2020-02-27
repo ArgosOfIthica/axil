@@ -1,11 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Spaceship.gd" type="Script" id=1]
 [ext_resource path="res://assets/pots/pot_dirt_empty.png" type="Texture" id=2]
 [ext_resource path="res://assets/icons/icon_water.png" type="Texture" id=3]
 [ext_resource path="res://assets/icons/icon_send_earth.png" type="Texture" id=4]
 [ext_resource path="res://assets/main_screen_bg.png" type="Texture" id=5]
-[ext_resource path="res://assets/Icons/icon_nutrients.png" type="Texture" id=6]
 [ext_resource path="res://assets/icons/icon_nutrients.png" type="Texture" id=7]
 [ext_resource path="res://assets/icons/icon_map.png" type="Texture" id=8]
 [ext_resource path="res://assets/icons/icon_Encyclopedia.png" type="Texture" id=9]
@@ -112,30 +111,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ThirstyPot1" type="Sprite" parent="."]
-position = Vector2( 540.433, 993.05 )
-texture = ExtResource( 3 )
-
-[node name="ThirstyPot2" type="Sprite" parent="."]
-position = Vector2( 1139.78, 997.833 )
-texture = ExtResource( 3 )
-
-[node name="ThirstyPot3" type="Sprite" parent="."]
-position = Vector2( 1700, 1005.01 )
-texture = ExtResource( 3 )
-
-[node name="NutrientsPot1" type="Sprite" parent="."]
-position = Vector2( 230, 980 )
-texture = ExtResource( 6 )
-
-[node name="NutrientsPot2" type="Sprite" parent="."]
-position = Vector2( 810, 980 )
-texture = ExtResource( 6 )
-
-[node name="NutrientsPot3" type="Sprite" parent="."]
-position = Vector2( 1365, 980 )
-texture = ExtResource( 6 )
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Spaceship_BG" type="Sprite" parent="ParallaxBackground"]
@@ -145,6 +120,15 @@ texture = ExtResource( 5 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
 autoplay = true
+
+[node name="Pot1" type="Position2D" parent="."]
+position = Vector2( 388.961, 1103.96 )
+
+[node name="Pot2" type="Position2D" parent="."]
+position = Vector2( 972.672, 1119.68 )
+
+[node name="Pot3" type="Position2D" parent="."]
+position = Vector2( 1525.62, 1130.37 )
 [connection signal="pressed" from="Seed" to="." method="_on_Seed_pressed"]
 [connection signal="pressed" from="Water" to="." method="_on_Water_pressed"]
 [connection signal="pressed" from="Nutrients" to="." method="_on_Nutrients_pressed"]

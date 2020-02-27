@@ -5,42 +5,24 @@ var current_scene = null
 
 signal new_frame
 
-#External API
-
-func _on_Choose_kill_choose_plant_1():
-	add_plant_to_inventory($Choose.choice_1, 'seedling')
-
-
-func _on_Choose_kill_choose_plant_2():
-	add_plant_to_inventory($Choose.choice_2, 'seedling')
-
-
-func _on_Choose_kill_choose_plant_3():
-	add_plant_to_inventory($Choose.choice_3, 'seedling')
-
-
-
-#Internal API
 
 func _ready():
 	current_scene = "choose"
-	
+	$Choose.choices[0] = instantiate_plant("water")
+	$Choose.choices[1] = instantiate_plant("fire")
+	$Choose.choices[2] = instantiate_plant("grass")
+
+
 func _process(delta):
 	emit_signal('new_frame')
 
 func to_spaceship():
-	current_scene = "spaceship"
 	$Spaceship.goto_spaceship()
 
+func instantiate_plant(species):
+	return $PlantFactory.instantiate_plant(species)
 
-func add_plant_to_inventory(species, stage):
-	$Spaceship.add_seedling(instantiate_plant(species, stage))
+
+func _CHOOSE_choose_plant():
+	$Spaceship.seedling = $Choose.user_chose
 	to_spaceship()
-	
-func instantiate_plant(species, stage):
-	var plantscene = load('res://Plant.tscn')
-	var plant = plantscene.instance()
-	return plant.Plant.new(species, stage)
-
-
-
