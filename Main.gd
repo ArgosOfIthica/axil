@@ -9,6 +9,7 @@ signal new_frame
 func _ready():
 	current_scene = "choose"
 	$Choose.choices[0] = instantiate_plant("water")
+	print($Choose.choices[0])
 	$Choose.choices[1] = instantiate_plant("fire")
 	$Choose.choices[2] = instantiate_plant("grass")
 

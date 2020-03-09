@@ -17,10 +17,16 @@ func goto_spaceship():
 #Internal API
 
 func _ready():
-	var potscene = load('res://Plant.tscn')
+	var potscene = load('res://Pots.tscn')
 	pots[0] = potscene.instance()
+	pots[0].position = $Pot1.position
 	pots[1] = potscene.instance()
+	pots[1].position = $Pot2.position
 	pots[2] = potscene.instance()
+	pots[2].position = $Pot3.position
+	add_child(pots[0])
+	add_child(pots[1])
+	add_child(pots[2])
 	hide()
 	
 	
@@ -70,6 +76,9 @@ func prepare_ship_rendering():
 		$Seed.set_button_icon(load(seedling.seedling_image_path))
 	else:
 		$Seed.set_button_icon(load("res://icon.png"))
+	pots[0].report_plant()
+	pots[1].report_plant()
+	pots[2].report_plant()
 
 func _on_Main_new_frame():
 	prepare_ship_rendering()
