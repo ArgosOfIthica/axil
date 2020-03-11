@@ -29,6 +29,6 @@ func nutrient_the_plant():
 func need_water():
 	return (OS.get_unix_time() - self.last_watered) > self.water_threshold
 
-func need_nutrients():
+func need_nutrient():
 	return (OS.get_unix_time() - self.last_nutrient) > self.nutrients_threshold
 

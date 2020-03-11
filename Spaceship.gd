@@ -21,8 +21,6 @@ func _ready():
 	pots[0] = potscene.instance()
 	pots[0].position = $Pot1.position
 	pots[0].places = 0
-	#self.connect("pot0_clicked", self, "_on_Pot_1_pressed")  
-	
 	pots[1] = potscene.instance()
 	pots[1].position = $Pot2.position
 	pots[1].places = 1

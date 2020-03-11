@@ -6,8 +6,7 @@ var places = null
 var plant = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#connect("pot0_clicked", Spaceship, "_on_Pot_1_pressed()")
-	pass
+	self.connect("pot0_clicked", get_parent(), "_on_Pot_1_pressed")
 
 func report_plant():
 	if plant != null:
