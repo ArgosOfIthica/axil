@@ -20,10 +20,15 @@ func _ready():
 	var potscene = load('res://Pots.tscn')
 	pots[0] = potscene.instance()
 	pots[0].position = $Pot1.position
+	pots[0].places = 0
+	#self.connect("pot0_clicked", self, "_on_Pot_1_pressed")  
+	
 	pots[1] = potscene.instance()
 	pots[1].position = $Pot2.position
+	pots[1].places = 1
 	pots[2] = potscene.instance()
 	pots[2].position = $Pot3.position
+	pots[2].places = 2
 	add_child(pots[0])
 	add_child(pots[1])
 	add_child(pots[2])
@@ -40,6 +45,7 @@ func _on_Nutrients_pressed():
 	selected = "nutrients"
 
 func _on_Pot_1_pressed():
+	print('reached2')
 	handle_selection(0)
 
 func _on_Pot_2_pressed():

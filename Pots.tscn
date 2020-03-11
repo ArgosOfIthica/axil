@@ -25,3 +25,4 @@ texture = ExtResource( 3 )
 [node name="Nutrients" type="Sprite" parent="."]
 position = Vector2( -158.847, -141.479 )
 texture = ExtResource( 2 )
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
