@@ -6,6 +6,7 @@ var stage = 0
 var seedling_image_path = null
 var stage_1_image_path = "res://assets/pots/pot_dirt_filled.png"
 var stage_2_image_path = null
+var stage_3_image_path = null
 var epoch = null
 var water_threshold = null
 var last_watered = 0
@@ -19,6 +20,8 @@ func current_render():
 		return self.stage_1_image_path
 	elif stage == 2:
 		return self.stage_2_image_path
+	elif stage == 3:
+		return self.stage_3_image_path
 
 func water_the_plant():
 	last_watered = OS.get_unix_time()

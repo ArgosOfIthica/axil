@@ -23,12 +23,12 @@ func instantiate_plant(species):
 	var plantscene = load('res://Plant.tscn')
 	var plant = plantscene.instance()
 	plant.epoch = OS.get_unix_time()
-	plant.stage = 0
+	plant.stage = 1
 	plant.species = species
-	#TODO: fix the image paths
 	plant.seedling_image_path = assets_folder + species + '/1.png'
-	plant.stage_1_image_path = assets_folder + species + '/1.png'
+	plant.stage_1_image_path = 'res://assets/pots/pot_dirt_filled.png'
 	plant.stage_2_image_path = assets_folder + species + '/2.png'
+	plant.stage_3_image_path = assets_folder + species + '/3.png'
 	plant.water_threshold = water_dict[species]
 	plant.nutrients_threshold = nutrients_dict[species]
 	return plant
