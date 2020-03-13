@@ -7,8 +7,9 @@ var water = null
 var nutrients = null
 var selected = null
 
-#External API
+signal open_map
 
+#External API
 
 func goto_spaceship():
 	prepare_ship_rendering()
@@ -73,10 +74,10 @@ func prepare_ship_rendering():
 func _on_Main_new_frame():
 	prepare_ship_rendering()
 
-
-func _on_map_button_pressed():
-	pass
-
-
 func _on_SendToEarth_pressed():
 	pass
+
+func _on_Map_pressed():
+	emit_signal('open_map')
+	$ParallaxBackground/Spaceship_BG.hide()
+	hide()

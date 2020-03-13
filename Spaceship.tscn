@@ -83,7 +83,6 @@ __meta__ = {
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Spaceship_BG" type="Sprite" parent="ParallaxBackground"]
-visible = false
 position = Vector2( 958.479, 642.121 )
 texture = ExtResource( 5 )
 
@@ -103,3 +102,4 @@ position = Vector2( 1525.62, 1130.37 )
 [connection signal="pressed" from="Water" to="." method="_on_Water_pressed"]
 [connection signal="pressed" from="Nutrients" to="." method="_on_Nutrients_pressed"]
 [connection signal="pressed" from="SendToEarth" to="." method="_on_SendToEarth_pressed"]
+[connection signal="pressed" from="Map" to="." method="_on_Map_pressed"]

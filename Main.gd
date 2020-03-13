@@ -19,11 +19,16 @@ func _process(delta):
 
 func to_spaceship():
 	$Spaceship.goto_spaceship()
+	
+func to_map():
+	$Explore.goto_map()
 
 func instantiate_plant(species):
 	return $PlantFactory.instantiate_plant(species)
 
-
 func _CHOOSE_choose_plant():
 	$Spaceship.seedling = $Choose.user_chose
 	to_spaceship()
+
+func _on_Spaceship_open_map():
+	to_map()
