@@ -18,6 +18,12 @@ const water_dict = {
 	"grass" : 6 * hour
 	}
 
+const growth_intervals = {
+	"fire" : [1, 17, 45, 200],
+	"grass": [1, 9, 30, 120],
+	"water": [1, 6, 24, 60]
+}
+
 
 func instantiate_plant(species):
 	var plantscene = load('res://Plant.tscn')
@@ -31,4 +37,5 @@ func instantiate_plant(species):
 	plant.stage_3_image_path = assets_folder + species + '/3.png'
 	plant.water_threshold = water_dict[species]
 	plant.nutrients_threshold = nutrients_dict[species]
+	plant.growth_intervals = growth_intervals[species]
 	return plant

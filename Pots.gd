@@ -1,12 +1,10 @@
 extends Node2D
-signal pot0_clicked
-signal pot1_clicked
-signal pot2_clicked
-var places = null
+var place = null
 var plant = null
+var spaceship = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	self.connect("pot0_clicked", get_parent(), "_on_Pot_1_pressed")
+	self.spaceship = get_parent()
 
 func report_plant():
 	if plant != null:
@@ -19,15 +17,12 @@ func report_plant():
 			$Nutrients.show()
 		else:
 			$Nutrients.hide()
+		if plant.ready_to_grow():
+			plant.next_stage()
 	else:
 		$Thirst.hide()
 		$Nutrients.hide()
 		$Button.set_normal_texture(load("res://assets/pots/pot_dirt_empty.png")) 
 
 func _on_Button_pressed():
-	if places == 0:
-		emit_signal("pot0_clicked")
-	elif places == 1:
-		emit_signal("pot1_clicked")
-	elif places == 2:
-		emit_signal("pot2_clicked")
+	spaceship.handle_pot_selection(place)
