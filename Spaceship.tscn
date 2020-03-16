@@ -80,9 +80,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+[node name="BG" type="ParallaxBackground" parent="."]
 
-[node name="Spaceship_BG" type="Sprite" parent="ParallaxBackground"]
+[node name="Spaceship_BG" type="Sprite" parent="BG"]
 position = Vector2( 958.479, 642.121 )
 texture = ExtResource( 5 )
 

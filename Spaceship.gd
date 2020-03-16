@@ -14,6 +14,7 @@ signal open_map
 func goto_spaceship():
 	prepare_ship_rendering()
 	show()
+	$BG.get_child(0).show()
 
 #Internal API
 
@@ -79,5 +80,5 @@ func _on_SendToEarth_pressed():
 
 func _on_Map_pressed():
 	emit_signal('open_map')
-	$ParallaxBackground/Spaceship_BG.hide()
+	$BG/Spaceship_BG.hide()
 	hide()

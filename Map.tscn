@@ -64,9 +64,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+[node name="BG" type="ParallaxBackground" parent="."]
 
-[node name="Space-BG" type="Sprite" parent="ParallaxBackground"]
+[node name="Space-BG" type="Sprite" parent="BG"]
 position = Vector2( 1037.24, 655.092 )
 scale = Vector2( 1.16387, 1.22286 )
 texture = ExtResource( 6 )
