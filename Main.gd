@@ -21,7 +21,7 @@ func to_spaceship():
 	$Spaceship.goto_spaceship()
 	
 func to_map():
-	$Explore.goto_map()
+	$Map.goto_map()
 
 func instantiate_plant(species):
 	return $PlantFactory.instantiate_plant(species)
@@ -32,3 +32,6 @@ func _CHOOSE_choose_plant():
 
 func _on_Spaceship_open_map():
 	to_map()
+
+func _on_Map_open_spaceship():
+	to_spaceship()
