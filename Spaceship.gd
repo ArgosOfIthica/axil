@@ -19,15 +19,10 @@ func goto_spaceship():
 #Internal API
 
 func _ready():
-	var potscene = load('res://Pots.tscn')
-	for pot in range(len(pots)):
-		pots[pot] = potscene.instance()
-		pots[pot].place = pot
-		add_child(pots[pot])
-	pots[0].position = $Pot1.position
-	pots[1].position = $Pot2.position
-	pots[2].position = $Pot3.position
 	hide()
+	pots = [$Pot1, $Pot2, $Pot3]
+	for pot in range(len(pots)):
+		pots[pot].place = pot
 	
 	
 func _on_Seed_pressed():
