@@ -14,12 +14,11 @@ __meta__ = {
 }
 
 [node name="return_arrow" type="TextureButton" parent="."]
-margin_left = 274.04
-margin_top = 240.692
-margin_right = 786.041
-margin_bottom = 752.692
-rect_rotation = 180.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 253.0
+margin_top = 34.0
+margin_right = 765.0
+margin_bottom = 546.0
+rect_rotation = 45.0
 texture_normal = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -28,7 +27,7 @@ __meta__ = {
 [node name="BG" type="ParallaxBackground" parent="."]
 
 [node name="Space-BG" type="Sprite" parent="BG"]
-position = Vector2( 1037.24, 655.092 )
+position = Vector2( 1042.58, 655.092 )
 scale = Vector2( 1.16387, 1.22286 )
 texture = ExtResource( 6 )
 
