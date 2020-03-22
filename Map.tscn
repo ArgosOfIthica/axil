@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/background/Space-BG.png" type="Texture" id=6]
+[ext_resource path="res://Map.gd" type="Script" id=7]
+[ext_resource path="res://assets/icons/arrow.png" type="Texture" id=8]
+[ext_resource path="res://Planet.tscn" type="PackedScene" id=9]
+
+[node name="Map" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="return_arrow" type="TextureButton" parent="."]
+margin_left = 253.0
+margin_top = 34.0
+margin_right = 765.0
+margin_bottom = 546.0
+rect_rotation = 45.0
+texture_normal = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG" type="ParallaxBackground" parent="."]
+
+[node name="Space-BG" type="Sprite" parent="BG"]
+position = Vector2( 1042.58, 655.092 )
+scale = Vector2( 1.16387, 1.22286 )
+texture = ExtResource( 6 )
+
+[node name="Planet1" parent="." instance=ExtResource( 9 )]
+position = Vector2( 376.839, 933.408 )
+
+[node name="Planet2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1067.8, 408.297 )
+
+[node name="Planet3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1603.61, 926.165 )
+[connection signal="pressed" from="return_arrow" to="." method="_on_return_arrow_pressed"]

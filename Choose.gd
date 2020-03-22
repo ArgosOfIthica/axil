@@ -1,26 +1,20 @@
 extends Control
 
-var choice_1 = 'water'
-var choice_2 = 'fire'
-var choice_3 = 'grass'
+var choices = [null, null, null]
+var user_chose = null
 
-
-signal kill_choose_plant_1
-signal kill_choose_plant_2
-signal kill_choose_plant_3
-
-
-#Internal API's
+signal choose_plant
 
 func _on_Button_1_pressed():
-	emit_signal('kill_choose_plant_1')
-	hide()
+	terminate_choose_scene(0)
 
 func _on_Button_2_pressed():
-	emit_signal('kill_choose_plant_2')
-	hide()
+	terminate_choose_scene(1)
 
 func _on_Button_3_pressed():
-	emit_signal('kill_choose_plant_3')
-	hide()
+	terminate_choose_scene(2)
 	
+func terminate_choose_scene(choice):
+	user_chose = choices[choice]
+	emit_signal('choose_plant')
+	hide()

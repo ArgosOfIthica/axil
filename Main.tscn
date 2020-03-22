@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Choose.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Spaceship.tscn" type="PackedScene" id=3]
+[ext_resource path="res://PlantFactory.gd" type="Script" id=4]
+[ext_resource path="res://Map.tscn" type="PackedScene" id=5]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -16,7 +18,12 @@ margin_left = 3.57123
 margin_top = -37.6272
 margin_right = 3.57123
 margin_bottom = -37.6272
+
+[node name="PlantFactory" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="Map" parent="." instance=ExtResource( 5 )]
 [connection signal="new_frame" from="." to="Spaceship" method="_on_Main_new_frame"]
-[connection signal="kill_choose_plant_1" from="Choose" to="." method="_on_Choose_kill_choose_plant_1"]
-[connection signal="kill_choose_plant_2" from="Choose" to="." method="_on_Choose_kill_choose_plant_2"]
-[connection signal="kill_choose_plant_3" from="Choose" to="." method="_on_Choose_kill_choose_plant_3"]
+[connection signal="choose_plant" from="Choose" to="." method="_CHOOSE_choose_plant"]
+[connection signal="open_map" from="Spaceship" to="." method="_on_Spaceship_open_map"]
+[connection signal="open_spaceship" from="Map" to="." method="_on_Map_open_spaceship"]
