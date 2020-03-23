@@ -4,6 +4,10 @@ var planets = null
 
 signal open_spaceship
 
+func hide_all():
+	hide()
+	$BG.get_child(0).hide() 
+
 func goto_map():
 	prepare_map_rendering()
 	show()
@@ -17,15 +21,20 @@ func _ready():
 	$Planet2.unlocked_image = 'res://assets/planets/Planet_Lava.png'
 	$Planet3.unlocked_image = 'res://assets/planets/Planet_03.png'
 	$Planet1.locked = false
-	$BG.get_child(0).hide()
-	hide()
+	hide_all()
 	planets = [$Planet1, $Planet2, $Planet3]
+	for planet in range(len(planets)):
+		planets[planet].place = planet
+		
 	
 func prepare_map_rendering():
 	for planet in planets:
 		planet.render()
 
 func _on_return_arrow_pressed():
-	hide()
-	$BG.get_child(0).hide()
+	hide_all()
 	emit_signal('open_spaceship')
+	
+func goto_choose_screen(plant_list):
+	hide_all()
+	get_parent().to_choose(plant_list)

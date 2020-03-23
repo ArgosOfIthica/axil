@@ -8,20 +8,26 @@ const assets_folder = "res://assets/plants/"
 const nutrients_dict = {
 	"fire" : 15 * hour ,
 	"water" : 10 ,#test value only
-	"grass" : 11 * hour
+	"grass" : 11 * hour,
+	"spoon" : 6 * hour,
+	"redspider": 18 * hour
 	}
 	
 	
 const water_dict = {
 	"fire" : 11 * hour ,
 	"water" : 8  ,#test value only
-	"grass" : 6 * hour
+	"grass" : 6 * hour,
+	"spoon" : 16 * hour,
+	"redspider" : 9 * hour
 	}
 
 const growth_intervals = {
 	"fire" : [1, 17, 45, 200],
 	"grass": [1, 9, 30, 120],
-	"water": [1, 6, 24, 60]
+	"water": [1, 6, 24, 60],
+	"spoon": [1, 8, 35, 300],
+	"redspider": [1, 9, 35, 250]
 }
 
 

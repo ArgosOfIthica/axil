@@ -22,6 +22,14 @@ func to_spaceship():
 func to_map():
 	$Map.goto_map()
 
+func to_choose(plant_list):
+	var new_list = [null, null, null]
+	for plant in range(3):
+		new_list[plant] = instantiate_plant(plant_list[plant])
+	#equivalent to the much more readable-> [instantiate_plant(plant) for plant in plant_list]
+	$Choose.choices = new_list
+	$Choose.goto_choose()
+
 func instantiate_plant(species):
 	return $PlantFactory.instantiate_plant(species)
 
