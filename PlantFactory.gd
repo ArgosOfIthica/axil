@@ -10,7 +10,11 @@ const nutrients_dict = {
 	"water" : 10 ,#test value only
 	"grass" : 11 * hour,
 	"spoon" : 6 * hour,
-	"redspider": 18 * hour
+	"redspider": 18 * hour,
+	"digiveg": 7 * hour,
+	"kniveleaves": 8 * hour,
+	"livingblub": 6 * hour,
+	"potatocoon": 17 * hour
 	}
 	
 	
@@ -19,7 +23,11 @@ const water_dict = {
 	"water" : 8  ,#test value only
 	"grass" : 6 * hour,
 	"spoon" : 16 * hour,
-	"redspider" : 9 * hour
+	"redspider" : 9 * hour,
+	"digiveg": 7 * hour,
+	"kniveleaves": 8 * hour,
+	"livingblub": 11 * hour,
+	"potatocoon": 7 * hour
 	}
 
 const growth_intervals = {
@@ -27,7 +35,11 @@ const growth_intervals = {
 	"grass": [1, 9, 30, 120],
 	"water": [1, 6, 24, 60],
 	"spoon": [1, 8, 35, 300],
-	"redspider": [1, 9, 35, 250]
+	"redspider": [1, 9, 35, 250],
+	"digiveg": [1, 16, 250, 2500],
+	"kniveleaves":[1, 11, 60, 350],
+	"livingblub":[1, 12, 40, 250],
+	"potatocoon":[1, 9, 40, 130]
 }
 
 

@@ -12,7 +12,11 @@ const starter_planet = {
 	"water": 1,
 	"grass": 1,
 	"spoon": 1,
-	"redspider": 1
+	"redspider": 1,
+	"digiveg": 0.5,
+	"kniveleaves": 0.5,
+	"livingblub": 1,
+	"potatocoon": 1
 	}
 	
 
