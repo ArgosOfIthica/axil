@@ -1,6 +1,5 @@
 extends Node2D
 
-
 var species = "water"
 var stage = 0
 var seedling_image_path = null
@@ -13,7 +12,7 @@ var last_watered = 0
 var nutrients_threshold = null
 var last_nutrient = 0
 var growth_intervals = null
-		
+
 func current_render():
 	if stage == 0:
 		return self.seedling_image_path
@@ -26,7 +25,7 @@ func current_render():
 
 func water_the_plant():
 	last_watered = OS.get_unix_time()
-	
+
 func nutrient_the_plant():
 	last_nutrient = OS.get_unix_time()
 
@@ -45,4 +44,3 @@ func ready_to_grow():
 func next_stage():
 	if stage < 3:
 		stage = stage + 1
-

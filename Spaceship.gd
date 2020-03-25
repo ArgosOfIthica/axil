@@ -1,6 +1,5 @@
 extends Control
 
-
 var pots = [null, null, null]
 var seedling = null
 var water = null
@@ -23,8 +22,7 @@ func _ready():
 	pots = [$Pot1, $Pot2, $Pot3]
 	for pot in range(len(pots)):
 		pots[pot].place = pot
-	
-	
+
 func _on_Seed_pressed():
 	selected = "seed"
 	

@@ -25,8 +25,7 @@ func _ready():
 	planets = [$Planet1, $Planet2, $Planet3]
 	for planet in range(len(planets)):
 		planets[planet].place = planet
-		
-	
+
 func prepare_map_rendering():
 	for planet in planets:
 		planet.render()
@@ -34,7 +33,7 @@ func prepare_map_rendering():
 func _on_return_arrow_pressed():
 	hide_all()
 	emit_signal('open_spaceship')
-	
-func goto_choose_screen(plant_list):
+
+func goto_rewards_screen(plant_list):
 	hide_all()
-	get_parent().to_choose(plant_list)
+	get_parent().to_rewards(plant_list)

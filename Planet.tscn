@@ -16,4 +16,5 @@ texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="open_rewards" from="." to="." method="_on_Planet_open_rewards"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

@@ -7,6 +7,8 @@ var plant_rarities = null
 
 var locked = true
 
+signal open_rewards
+
 const starter_planet = {
 	"fire": 1,
 	"water": 1,
@@ -18,12 +20,10 @@ const starter_planet = {
 	"livingblub": 1,
 	"potatocoon": 1
 	}
-	
 
 func _ready():
 	pass
-		
-	
+
 func render():
 	if locked:
 		$Button.set_normal_texture(load(locked_image))
@@ -36,7 +36,7 @@ func give_plant_choices():
 		for picks in range(3):
 			choices[picks] = give_plant_from_dict(starter_planet)
 	return choices
-		
+
 func give_plant_from_dict(planetdict):
 	var total_weight = 0
 	for plant in planetdict:
@@ -47,16 +47,11 @@ func give_plant_from_dict(planetdict):
 		running_total = running_total + planetdict[plant]
 		if rng < running_total:
 			return plant
-		
-		
-	
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
-
 func _on_Button_pressed():
-	var choices = give_plant_choices()
-	get_parent().goto_choose_screen(choices)
+	var rewards = give_plant_choices()
+	get_parent().goto_rewards_screen(rewards)

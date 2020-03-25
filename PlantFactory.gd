@@ -1,6 +1,5 @@
 extends Node
 
-
 const minute = 60
 const hour = 3600
 const assets_folder = "res://assets/plants/"
@@ -16,7 +15,6 @@ const nutrients_dict = {
 	"livingblub": 6 * hour,
 	"potatocoon": 17 * hour
 	}
-	
 	
 const water_dict = {
 	"fire" : 11 * hour ,
@@ -41,7 +39,6 @@ const growth_intervals = {
 	"livingblub":[1, 12, 40, 250],
 	"potatocoon":[1, 9, 40, 130]
 }
-
 
 func instantiate_plant(species):
 	var plantscene = load('res://Plant.tscn')
