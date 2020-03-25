@@ -8,6 +8,7 @@ var nutrients = null
 var selected = null
 
 signal open_map
+signal send_to_earth
 
 #External API
 
@@ -34,6 +35,10 @@ func _on_Water_pressed():
 func _on_Nutrients_pressed():
 	selected = "nutrients"
 
+func _on_SendToEarth_pressed():
+	$SendToEarth.goto_sendtoearth()
+	selected = "send"
+
 func handle_pot_selection(chosen_pot):
 	if selected == "seed" and seedling != null:
 		select_seed(chosen_pot)
@@ -41,6 +46,8 @@ func handle_pot_selection(chosen_pot):
 		water_plant(chosen_pot)
 	elif selected == "nutrients":
 		add_nutrients(chosen_pot)
+	elif selected == "send":
+		$SendToEarth.selection(chosen_pot)
 
 func select_seed(chosen_pot):
 		pots[chosen_pot].plant = seedling
@@ -70,10 +77,8 @@ func prepare_ship_rendering():
 func _on_Main_new_frame():
 	prepare_ship_rendering()
 
-func _on_SendToEarth_pressed():
-	pass
-
 func _on_Map_pressed():
 	emit_signal('open_map')
 	$BG/Spaceship_BG.hide()
 	hide()
+

@@ -22,6 +22,7 @@ func to_spaceship():
 func to_map():
 	$Map.goto_map()
 
+
 func to_choose(plant_list):
 	var new_list = [null, null, null]
 	for plant in range(3):

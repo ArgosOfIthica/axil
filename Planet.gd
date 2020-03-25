@@ -16,7 +16,11 @@ const starter_planet = {
 	"digiveg": 0.5,
 	"kniveleaves": 0.5,
 	"livingblub": 1,
-	"potatocoon": 1
+	"potatocoon": 1,
+	"stonemoss": 0.5,
+	"purpletentacles": .75,
+	"firefleur" : .75,
+	"hand": .25
 	}
 	
 

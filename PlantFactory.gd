@@ -14,7 +14,11 @@ const nutrients_dict = {
 	"digiveg": 7 * hour,
 	"kniveleaves": 8 * hour,
 	"livingblub": 6 * hour,
-	"potatocoon": 17 * hour
+	"potatocoon": 17 * hour,
+	"stonemoss": 20 * hour,
+	"purpletentacles": 10 * hour,
+	"firefleur": 13 * hour,
+	"hand": 19 * hour
 	}
 	
 	
@@ -27,7 +31,11 @@ const water_dict = {
 	"digiveg": 7 * hour,
 	"kniveleaves": 8 * hour,
 	"livingblub": 11 * hour,
-	"potatocoon": 7 * hour
+	"potatocoon": 7 * hour,
+	"stonemoss": 10 * hour,
+	"purpletentacles": 5 * hour,
+	"firefleur": 10 * hour,
+	"hand": 3 * hour
 	}
 
 const growth_intervals = {
@@ -39,7 +47,11 @@ const growth_intervals = {
 	"digiveg": [1, 16, 250, 2500],
 	"kniveleaves":[1, 11, 60, 350],
 	"livingblub":[1, 12, 40, 250],
-	"potatocoon":[1, 9, 40, 130]
+	"potatocoon":[1, 9, 40, 130],
+	"stonemoss": [1, 12, 40, 250] ,
+	"purpletentacles": [1, 9, 40, 130], 
+	"firefleur": [1, 17, 45, 200],
+	"hand": [1, 9, 30, 120]
 }
 
 
