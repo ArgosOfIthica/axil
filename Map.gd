@@ -34,6 +34,10 @@ func _on_return_arrow_pressed():
 	hide_all()
 	emit_signal('open_spaceship')
 
-func goto_rewards_screen(plant_list):
+func goto_choose_screen(plant_list):
 	hide_all()
-	get_parent().to_rewards(plant_list)
+	get_parent().to_choose(plant_list)
+
+func goto_rewards_screen():
+	hide_all()
+	get_parent().to_rewards()

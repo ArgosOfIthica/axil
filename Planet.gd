@@ -7,8 +7,6 @@ var plant_rarities = null
 
 var locked = true
 
-signal open_rewards
-
 const starter_planet = {
 	"fire": 1,
 	"water": 1,
@@ -53,5 +51,6 @@ func give_plant_from_dict(planetdict):
 #	pass
 
 func _on_Button_pressed():
-	var rewards = give_plant_choices()
-	get_parent().goto_rewards_screen(rewards)
+	var choices = give_plant_choices()
+	get_parent().goto_choose_screen(choices)
+	get_parent().goto_rewards_screen()

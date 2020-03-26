@@ -19,12 +19,16 @@ func to_spaceship():
 func to_map():
 	$Map.goto_map()
 	
-func to_rewards(plant_list):
+func to_rewards():
+	$Rewards.goto_rewards()
+	
+func to_choose(plant_list):
 	var new_list = [null, null, null]
 	for plant in range(3):
 		new_list[plant] = instantiate_plant(plant_list[plant])
-	$Rewards.choices = new_list
-	$Rewards.goto_rewards()
+	$Choose.choices = new_list
+	$Choose.goto_choose()
+	$Choose.hide()
 
 func instantiate_plant(species):
 	return $PlantFactory.instantiate_plant(species)
@@ -33,12 +37,11 @@ func _CHOOSE_choose_plant():
 	$Spaceship.seedling = $Choose.user_chose
 	to_spaceship()
 
-func _on_Rewards_choose_reward():
-	$Spaceship.seedling = $Rewards.user_chose
-	to_spaceship()
-
 func _on_Spaceship_open_map():
 	to_map()
 
 func _on_Map_open_spaceship():
 	to_spaceship()
+
+func _on_Rewards_open_choose():
+	$Choose.show()

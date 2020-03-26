@@ -20,7 +20,7 @@ func terminate_choose_scene(choice):
 	hide()
 
 func goto_choose():
+	hide()
 	$Button_1.set_normal_texture(load(choices[0].seedling_image_path))
 	$Button_2.set_normal_texture(load(choices[1].seedling_image_path))
 	$Button_3.set_normal_texture(load(choices[2].seedling_image_path))
-	show()

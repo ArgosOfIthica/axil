@@ -30,4 +30,4 @@ script = ExtResource( 4 )
 [connection signal="choose_plant" from="Choose" to="." method="_CHOOSE_choose_plant"]
 [connection signal="open_map" from="Spaceship" to="." method="_on_Spaceship_open_map"]
 [connection signal="open_spaceship" from="Map" to="." method="_on_Map_open_spaceship"]
-[connection signal="choose_reward" from="Rewards" to="." method="_on_Rewards_choose_reward"]
+[connection signal="open_choose" from="Rewards" to="." method="_on_Rewards_open_choose"]
