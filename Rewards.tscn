@@ -32,6 +32,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Water" type="Sprite" parent="."]
+position = Vector2( 525, 600 )
+texture = ExtResource( 3 )
+
+[node name="Nutrient" type="Sprite" parent="."]
+position = Vector2( 1100, 600 )
+texture = ExtResource( 4 )
+
 [node name="Button" type="Button" parent="."]
 margin_left = 853.097
 margin_top = 904.307
@@ -43,11 +51,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Water" type="Sprite" parent="."]
-position = Vector2( 525, 600 )
-texture = ExtResource( 3 )
-
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 1100, 600 )
-texture = ExtResource( 4 )
+[node name="WaterLabel" type="Label" parent="."]
+margin_left = 662.112
+margin_top = 541.27
+margin_right = 757.112
+margin_bottom = 656.27
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
