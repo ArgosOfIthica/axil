@@ -48,6 +48,7 @@ func handle_pot_selection(chosen_pot):
 		add_nutrients(chosen_pot)
 	elif selected == "send":
 		$SendToEarth.selection(chosen_pot)
+		selected = null
 
 func select_seed(chosen_pot):
 		pots[chosen_pot].plant = seedling

@@ -6,11 +6,11 @@
 [ext_resource path="res://assets/icons/denybox.png" type="Texture" id=4]
 [ext_resource path="res://assets/icons/confirmbox.png" type="Texture" id=5]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 64
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 100
 font_data = ExtResource( 3 )
 
@@ -30,7 +30,7 @@ margin_left = 395.729
 margin_top = 23.6761
 margin_right = 1559.73
 margin_bottom = 202.676
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Which plant would you like to send back to Earth?
 (or click the Earth button again to cancel)"
@@ -48,7 +48,7 @@ margin_left = 340.01
 margin_top = 340.01
 margin_right = 1545.01
 margin_bottom = 617.01
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Would you like to send this plant 
 back to Earth?"

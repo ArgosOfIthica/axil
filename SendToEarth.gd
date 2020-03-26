@@ -1,10 +1,11 @@
 extends Control
 
-var chosen_pot
-bool confirm
+var selected_pot
 
 func goto_sendtoearth():
 	show()
+	$textbox_which.show()
+	$which_plant_text.show()
 	$textbox_confirm.hide()
 	$confirm_text.hide()
 	$yesButton.hide()
@@ -21,15 +22,12 @@ func selection(chosen_pot):
 	$confirm_text.show()
 	$yesButton.show()
 	$noButton.show()
-	if confirm = true:
-		$Spaceship.pots[chosen_pot].plant = null
-		hide()
-	if $noButton.pressed:
-		-_on_noButton_pressed()
+	selected_pot = chosen_pot
 	
 
 func _on_yesButton_pressed():
-	confirm = true
+	get_parent().pots[selected_pot].plant = null
+	hide()
 
 
 func _on_noButton_pressed():
