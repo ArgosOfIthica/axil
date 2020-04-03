@@ -18,7 +18,9 @@ const nutrients_dict = {
 	"stonemoss": 20 * hour,
 	"purpletentacles": 10 * hour,
 	"firefleur": 13 * hour,
-	"hand": 19 * hour
+	"hand": 19 * hour,
+	"alienboi": 13 * hour,
+	"strangerock" :10 * hour
 	}
 	
 	
@@ -35,7 +37,9 @@ const water_dict = {
 	"stonemoss": 10 * hour,
 	"purpletentacles": 5 * hour,
 	"firefleur": 10 * hour,
-	"hand": 3 * hour
+	"hand": 3 * hour,
+	"alienboi": 13 * hour,
+	"strangerock" :10 * hour
 	}
 
 const growth_intervals = {
@@ -51,7 +55,9 @@ const growth_intervals = {
 	"stonemoss": [1, 12, 40, 250] ,
 	"purpletentacles": [1, 9, 40, 130], 
 	"firefleur": [1, 17, 45, 200],
-	"hand": [1, 9, 30, 120]
+	"hand": [1, 9, 30, 120],
+	"alienboi": [1, 12, 40, 250],
+	"strangerock" : [1, 11, 60, 350]
 }
 
 

@@ -1,9 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Choose.gd" type="Script" id=1]
-[ext_resource path="res://assets/plants/fire/1.png" type="Texture" id=2]
-[ext_resource path="res://assets/plants/water/1.png" type="Texture" id=3]
-[ext_resource path="res://assets/plants/grass/1.png" type="Texture" id=4]
 [ext_resource path="res://assets/fonts/oswald/Oswald-Regular.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=1]
@@ -37,34 +34,31 @@ __meta__ = {
 }
 
 [node name="Button_3" type="TextureButton" parent="."]
-margin_left = 1173.02
-margin_top = 123.461
-margin_right = 1728.02
-margin_bottom = 612.461
-rect_scale = Vector2( 1.7, 1.7 )
-texture_normal = ExtResource( 4 )
+margin_left = 1334.32
+margin_top = 424.031
+margin_right = 1769.32
+margin_bottom = 859.031
+rect_scale = Vector2( 1.3, 1.3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button_2" type="TextureButton" parent="."]
-margin_left = 634.038
-margin_top = 289.84
-margin_right = 1069.04
-margin_bottom = 724.84
-rect_scale = Vector2( 1.5, 1.5 )
-texture_normal = ExtResource( 2 )
+margin_left = 702.2
+margin_top = 423.892
+margin_right = 1137.2
+margin_bottom = 858.892
+rect_scale = Vector2( 1.3, 1.3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button_1" type="TextureButton" parent="."]
-margin_left = -294.0
-margin_top = -213.0
-margin_right = 357.0
-margin_bottom = 710.0
-rect_scale = Vector2( 1.7, 1.7 )
-texture_normal = ExtResource( 3 )
+margin_left = 31.6396
+margin_top = 428.406
+margin_right = 466.64
+margin_bottom = 863.406
+rect_scale = Vector2( 1.3, 1.3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

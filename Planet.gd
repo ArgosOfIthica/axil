@@ -13,14 +13,16 @@ const starter_planet = {
 	"grass": 1,
 	"spoon": 1,
 	"redspider": 1,
-	"digiveg": 0.5,
-	"kniveleaves": 0.5,
+	"digiveg": 1,
+	"kniveleaves": 1,
 	"livingblub": 1,
 	"potatocoon": 1,
-	"stonemoss": 0.5,
-	"purpletentacles": .75,
-	"firefleur" : .75,
-	"hand": .25
+	"stonemoss": 1,
+	"purpletentacles": 1,
+	"firefleur" : 1,
+	"hand": 1,
+	"alienboi": 2,
+	"strangerock" : 2
 	}
 	
 
