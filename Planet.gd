@@ -21,8 +21,10 @@ const starter_planet = {
 	"purpletentacles": 1,
 	"firefleur" : 1,
 	"hand": 1,
-	"alienboi": 2,
-	"strangerock" : 2
+	"alienboi": 1,
+	"strangerock" : 1,
+	"smileyboi" : 2,
+	"strugglepot" : 2
 	}
 	
 

@@ -20,7 +20,9 @@ const nutrients_dict = {
 	"firefleur": 13 * hour,
 	"hand": 19 * hour,
 	"alienboi": 13 * hour,
-	"strangerock" :10 * hour
+	"strangerock" :10 * hour,
+	"smileyboi" : 2 * hour,
+	"strugglepot" : 7 * hour
 	}
 	
 	
@@ -39,7 +41,9 @@ const water_dict = {
 	"firefleur": 10 * hour,
 	"hand": 3 * hour,
 	"alienboi": 13 * hour,
-	"strangerock" :10 * hour
+	"strangerock" :10 * hour,
+	"smileyboi" : 5 * hour,
+	"strugglepot" : 10 * hour
 	}
 
 const growth_intervals = {
@@ -57,7 +61,9 @@ const growth_intervals = {
 	"firefleur": [1, 17, 45, 200],
 	"hand": [1, 9, 30, 120],
 	"alienboi": [1, 12, 40, 250],
-	"strangerock" : [1, 11, 60, 350]
+	"strangerock" : [1, 11, 60, 350],
+	"smileyboi" : [1, 9, 30, 120],
+	"strugglepot" : [1, 8, 35, 300]
 }
 
 

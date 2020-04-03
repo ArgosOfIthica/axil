@@ -60,8 +60,8 @@ const response_dict = {
 	"hand": "We just received your latest specimen and... well, the plant opened the shipping container on its own. The lab assistants were scared at first, but the plant seems to want to lend them a hand with research. Keep them coming!",
 	"alienboi": "Thank you for sending this sample! Keep 'em coming!",
 	"strangerock": "Thank you for sending this sample! Keep 'em coming!",
-	
-	"Nil": "There's no plant here!"
+	"smileyboi" : "Thank you for sending this sample! Keep 'em coming!",
+	"strugglepot" : "Thank you for sending this sample! Keep 'em coming!"
 	}
 
 
