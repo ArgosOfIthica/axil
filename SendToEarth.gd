@@ -45,7 +45,7 @@ func _on_closeButton_pressed():
 	hide()
 
 const response_dict = {
-	"fire" : "TWe are so very glad that you sent this plant along when you did! The heater in the lab has gone out and we have been wearing our winter coats for a week! But this specimen has been heating the whole complex! Your research is helping us already!",
+	"fire" : "We are so very glad that you sent this plant along when you did! The heater in the lab has gone out and we have been wearing our winter coats for a week! But this specimen has been heating the whole complex! Your research is helping us already!",
 	"water" : "I just wanted to let you know that we received your aquatic sample and have started testing the water that it produces. Apparently, it’s rich in chlorine, so the lab may be getting a pool pretty soon. Thanks again for all of your research!",
 	"grass" : "Hello there! We have some great news about the newest plant that you have sent. One of our technicians was eating a salad and got curious; long story short, apparently this plant is extremely nutritious and flavorful! We are thinking that it’ll help with food shortages, so please keep up your important exploration!",
 	"spoon" : "I’m glad you have been able to send another specimen. I have never seen such an independent plant! It’s so grown up, what’s next? Is it going to head off to college and leave me, too? Oh, sorry, got carried away there. Anyway, keep on cultivating!",
@@ -59,7 +59,9 @@ const response_dict = {
 	"firefleur": "Thank you for sending this flower when you did! It has been so sad and overcast lately that being able to study this warm, powerful plant has been great for all of us in the lab. It feels like the middle of summer with the amount of heat that this plant makes. Thanks for sending all your plants back here!",
 	"hand": "We just received your latest specimen and... well, the plant opened the shipping container on its own. The lab assistants were scared at first, but the plant seems to want to lend them a hand with research. Keep them coming!",
 	"alienboi": "Thank you for sending this sample! Keep 'em coming!",
-	"strangerock": "Thank you for sending this sample! Keep 'em coming!"
+	"strangerock": "Thank you for sending this sample! Keep 'em coming!",
+	
+	"Nil": "There's no plant here!"
 	}
 
 
