@@ -15,8 +15,8 @@ font_data = ExtResource( 3 )
 size = 100
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=3]
-size = 82
+[sub_resource type="DynamicFont" id=4]
+size = 80
 font_data = ExtResource( 3 )
 
 [node name="SendToEarth" type="Control"]
@@ -85,21 +85,8 @@ __meta__ = {
 }
 
 [node name="textbox_response" type="Sprite" parent="."]
-position = Vector2( 966.626, 655.098 )
+position = Vector2( 970.374, 655.098 )
 texture = ExtResource( 2 )
-
-[node name="response_text" type="Label" parent="."]
-margin_left = 276.0
-margin_top = 286.0
-margin_right = 1622.0
-margin_bottom = 843.0
-custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-align = 1
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="closeButton" type="TextureButton" parent="."]
 margin_left = 637.296
@@ -108,6 +95,17 @@ margin_right = 974.296
 margin_bottom = 976.553
 rect_scale = Vector2( 2, 2 )
 texture_normal = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="response_text" type="RichTextLabel" parent="."]
+margin_left = 355.0
+margin_top = 280.0
+margin_right = 1567.0
+margin_bottom = 836.0
+custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
