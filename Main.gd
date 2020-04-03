@@ -11,6 +11,7 @@ func _ready():
 	$Choose.choices[0] = instantiate_plant("water")
 	$Choose.choices[1] = instantiate_plant("fire")
 	$Choose.choices[2] = instantiate_plant("grass")
+	$Choose.goto_choose()
 
 
 func _process(delta):
