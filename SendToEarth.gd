@@ -38,10 +38,9 @@ func _on_yesButton_pressed():
 	$response_text.show()
 	$closeButton.show()
 	$response_text.text = response_dict[get_parent().pots[selected_pot].plant.species]
-	
+	get_parent().pots[selected_pot].plant = null
 	
 func _on_closeButton_pressed():
-	get_parent().pots[selected_pot].plant = null
 	hide()
 
 const response_dict = {
@@ -58,8 +57,8 @@ const response_dict = {
 	"purpletentacles": "Avast, my space traveling colleague! Sorry, your last plant has really gotten me in a sea-faring mood. These little tentacle leaves are quite possessive, but that’s alright because they help me hold extra tools! Arrgh! Thank ye for your continued research!",
 	"firefleur": "Thank you for sending this flower when you did! It has been so sad and overcast lately that being able to study this warm, powerful plant has been great for all of us in the lab. It feels like the middle of summer with the amount of heat that this plant makes. Thanks for sending all your plants back here!",
 	"hand": "We just received your latest specimen and... well, the plant opened the shipping container on its own. The lab assistants were scared at first, but the plant seems to want to lend them a hand with research. Keep them coming!",
-	"alienboi": "Thank you for sending this sample! Keep 'em coming!",
-	"strangerock": "Thank you for sending this sample! Keep 'em coming!",
+	"alienboi": "Let me begin this transmission with some clarification: your other specimens have been amazing... but this “plant” is by far the most fantastic! This little extraterrestrial is studying us as much as we are studying them. The alien, as well as the rest of the lab is excited to see what you send us next!",
+	"strangerock": "Hello again, we got your newest specimen and it has created quite the buzz around the office! Due to an odd idea from one of our interns, we have discovered that the crystals on the plant are actually gelatinous, and if prompted, will absorb our lab tools. Keep up the good work, and if you have any extra forceps, we may need a new pair for no reason in particular.",
 	"smileyboi" : "Thank you for sending this sample! Keep 'em coming!",
 	"strugglepot" : "Thank you for sending this sample! Keep 'em coming!"
 	}
