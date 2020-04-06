@@ -15,7 +15,7 @@ font_data = ExtResource( 3 )
 size = 100
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 size = 80
 font_data = ExtResource( 3 )
 
@@ -105,7 +105,7 @@ margin_top = 280.0
 margin_right = 1567.0
 margin_bottom = 836.0
 mouse_filter = 1
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false

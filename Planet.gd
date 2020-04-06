@@ -55,15 +55,6 @@ func give_plant_from_dict(planetdict):
 		running_total = running_total + planetdict[plant]
 		if rng < running_total:
 			return plant
-		
-		
-	
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
 
 func _on_Button_pressed():
 	var choices = give_plant_choices()
