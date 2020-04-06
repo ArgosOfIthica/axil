@@ -23,10 +23,22 @@ func selection(chosen_pot):
 	$textbox_which.hide()
 	$which_plant_text.hide()
 	$textbox_confirm.show()
-	$confirm_text.show()
-	$yesButton.show()
-	$noButton.show()
 	selected_pot = chosen_pot
+	if get_parent().pots[selected_pot].plant != null:
+		if get_parent().pots[selected_pot].plant.stage == 3:
+			$confirm_text.text = "Would you like to send this plant back to Earth?"
+			$confirm_text.show()
+			$yesButton.show()
+			$noButton.show()
+		else:
+			$confirm_text.text = "This plant is not fully grown yet!"
+			$confirm_text.show()
+			$closeButton.show()
+	elif get_parent().pots[selected_pot].plant == null:
+		$confirm_text.text = "There is no plant here to send back!"
+		$confirm_text.show()
+		$closeButton.show()
+	
 	
 
 func _on_yesButton_pressed():
