@@ -1,10 +1,6 @@
 extends Node2D
 var place = null
 var plant = null
-var spaceship = null
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	self.spaceship = get_parent()
 
 func report_plant():
 	if plant != null:
@@ -25,4 +21,4 @@ func report_plant():
 		$Button.set_normal_texture(load("res://assets/pots/pot_dirt_empty.png")) 
 
 func _on_Button_pressed():
-	spaceship.handle_pot_selection(place)
+	get_parent().handle_pot_selection(place)
