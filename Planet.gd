@@ -4,6 +4,9 @@ var locked_image = null
 var unlocked_image = null
 var place = null
 var plant_rarities = null
+var active = false
+
+onready var timer = get_node("Timer")
 
 var locked = true
 
@@ -30,8 +33,17 @@ const starter_planet = {
 
 func _ready():
 	pass
-		
 	
+#func _process(delta):
+#	if InputEventScreenTouch:
+#		$Timer.wait_time = 5
+#		$Timer.start()
+#		active = true
+
+func _on_Timer_timeout():
+	$Timer.stop()
+	#active = false
+
 func render():
 	if locked:
 		$Button.set_normal_texture(load(locked_image))
@@ -57,5 +69,14 @@ func give_plant_from_dict(planetdict):
 			return plant
 
 func _on_Button_pressed():
-	var choices = give_plant_choices()
-	get_parent().goto_choose_screen(choices)
+	if !active:
+		$Timer.wait_time = 5
+		$Timer.start()
+		active = true
+	if active and $Timer.is_stopped():
+		var choices = give_plant_choices()
+		get_parent().goto_choose_screen(choices)
+		active = false
+
+
+
