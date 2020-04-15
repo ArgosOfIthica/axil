@@ -18,9 +18,14 @@ func terminate_choose_scene(choice):
 	user_chose = choices[choice]
 	emit_signal('choose_plant')
 	hide()
+	$BG.get_child(0).hide()
+
+func _ready():
+	$BG.get_child(0).hide()
 
 func goto_choose():
 	$Button_1.set_normal_texture(load(choices[0].seedling_image_path))
 	$Button_2.set_normal_texture(load(choices[1].seedling_image_path))
 	$Button_3.set_normal_texture(load(choices[2].seedling_image_path))
 	show()
+	$BG.get_child(0).show()

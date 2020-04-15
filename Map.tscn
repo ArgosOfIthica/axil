@@ -14,11 +14,10 @@ __meta__ = {
 }
 
 [node name="return_arrow" type="TextureButton" parent="."]
-margin_left = 253.0
-margin_top = 34.0
-margin_right = 765.0
-margin_bottom = 546.0
-rect_rotation = 45.0
+margin_left = 30.4803
+margin_top = 39.3405
+margin_right = 327.48
+margin_bottom = 229.34
 texture_normal = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -27,16 +26,17 @@ __meta__ = {
 [node name="BG" type="ParallaxBackground" parent="."]
 
 [node name="Space-BG" type="Sprite" parent="BG"]
-position = Vector2( 1042.58, 655.092 )
-scale = Vector2( 1.16387, 1.22286 )
+visible = false
+position = Vector2( 964.253, 543.832 )
+scale = Vector2( 1.00254, 1.01023 )
 texture = ExtResource( 6 )
 
 [node name="Planet1" parent="." instance=ExtResource( 9 )]
-position = Vector2( 376.839, 933.408 )
+position = Vector2( 382.179, 799.896 )
 
 [node name="Planet2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1067.8, 408.297 )
+position = Vector2( 996.594, 401.176 )
 
 [node name="Planet3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1603.61, 926.165 )
+position = Vector2( 1603.61, 817.575 )
 [connection signal="pressed" from="return_arrow" to="." method="_on_return_arrow_pressed"]

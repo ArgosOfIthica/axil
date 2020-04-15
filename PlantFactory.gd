@@ -52,7 +52,7 @@ const growth_intervals = {
 	"water": [1, 6, 24, 60],
 	"spoon": [1, 8, 35, 300],
 	"redspider": [1, 9, 35, 250],
-	"digiveg": [1, 16, 250, 2500],
+	"digiveg": [1, 16, 250, 250],
 	"kniveleaves":[1, 11, 60, 350],
 	"livingblub":[1, 12, 40, 250],
 	"potatocoon":[1, 9, 40, 130],

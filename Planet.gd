@@ -8,23 +8,23 @@ var plant_rarities = null
 var locked = true
 
 const starter_planet = {
-	"fire": 1,
-	"water": 1,
-	"grass": 1,
-	"spoon": 1,
-	"redspider": 1,
+	"fire": .5,
+	"water": .5,
+	"grass": .5,
+	"spoon": .75,
+	"redspider": .75,
 	"digiveg": 1,
-	"kniveleaves": 1,
-	"livingblub": 1,
-	"potatocoon": 1,
-	"stonemoss": 1,
-	"purpletentacles": 1,
-	"firefleur" : 1,
+	"kniveleaves": .75,
+	"livingblub": .75,
+	"potatocoon": .75,
+	"stonemoss": .75,
+	"purpletentacles": .75,
+	"firefleur" : .75,
 	"hand": 1,
 	"alienboi": 1,
 	"strangerock" : 1,
-	"smileyboi" : 2,
-	"strugglepot" : 2
+	"smileyboi" : 1,
+	"strugglepot" : 1
 	}
 	
 

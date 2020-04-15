@@ -9,6 +9,7 @@ var selected = null
 
 signal open_map
 signal send_to_earth
+signal open_encyclopedia
 
 #External API
 
@@ -83,3 +84,7 @@ func _on_Map_pressed():
 	$BG/Spaceship_BG.hide()
 	hide()
 
+func _on_Journal_pressed():
+	emit_signal('open_encyclopedia')
+	$BG/Spaceship_BG.hide()
+	hide()

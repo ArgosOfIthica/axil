@@ -23,6 +23,8 @@ func to_spaceship():
 func to_map():
 	$Map.goto_map()
 
+func to_encyclopedia():
+	$Encyclopedia.goto_encyclopedia()
 
 func to_choose(plant_list):
 	var new_list = [null, null, null]
@@ -43,4 +45,10 @@ func _on_Spaceship_open_map():
 	to_map()
 
 func _on_Map_open_spaceship():
+	to_spaceship()
+
+func _on_Spaceship_open_encyclopedia():
+	to_encyclopedia()
+
+func _on_Encyclopedia_open_spaceship():
 	to_spaceship()

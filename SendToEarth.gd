@@ -71,8 +71,8 @@ const response_dict = {
 	"hand": "We just received your latest specimen and... well, the plant opened the shipping container on its own. The lab assistants were scared at first, but the plant seems to want to lend them a hand with research. Keep them coming!",
 	"alienboi": "Let me begin this transmission with some clarification: your other specimens have been amazing... but this “plant” is by far the most fantastic! This little extraterrestrial is studying us as much as we are studying them. The alien, as well as the rest of the lab is excited to see what you send us next!",
 	"strangerock": "Hello again, we got your newest specimen and it has created quite the buzz around the office! Due to an odd idea from one of our interns, we have discovered that the crystals on the plant are actually gelatinous, and if prompted, will absorb our lab tools. Keep up the good work, and if you have any extra forceps, we may need a new pair for no reason in particular.",
-	"smileyboi" : "Thank you for sending this sample! Keep 'em coming!",
-	"strugglepot" : "Thank you for sending this sample! Keep 'em coming!"
+	"smileyboi" : "Good morning! Or good-whatever- time it is where you are! Oh, sorry, I’m just in such a chipper mood, all thanks to your newest plant! It has been raising not only the teams’ morale, but all of the other plants in the office have seemed to get a pick-me-up as well. If these are the plants you are finding, keep them coming!",
+	"strugglepot" : "I hope you’re doing well! We just unpacked your newest plant and we have been quite perplexed by its physiology. The cups are always seeming to shift and wobble, and to make things more difficult, there is a tiny teacup bud that is making it even harder to balance. We have been cheering this plant on as we study it. Anyway, we hope you can keep sending us plants!"
 	}
 
 

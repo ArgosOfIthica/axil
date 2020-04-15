@@ -85,6 +85,7 @@ __meta__ = {
 [node name="BG" type="ParallaxBackground" parent="."]
 
 [node name="Spaceship_BG" type="Sprite" parent="BG"]
+visible = false
 position = Vector2( 958.479, 642.121 )
 texture = ExtResource( 5 )
 
@@ -93,17 +94,22 @@ stream = ExtResource( 10 )
 autoplay = true
 
 [node name="Pot1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 387.699, 1107.71 )
+position = Vector2( 381.192, 905.991 )
 
 [node name="Pot2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 959.178, 1117.78 )
+position = Vector2( 964.058, 917.688 )
 
 [node name="Pot3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1518.07, 1127.85 )
+position = Vector2( 1526.2, 916.37 )
 
 [node name="SendToEarth" parent="." instance=ExtResource( 6 )]
+margin_left = 8.13379
+margin_top = 6.00815e-05
+margin_right = 8.13379
+margin_bottom = 6.00815e-05
 [connection signal="pressed" from="Seed" to="." method="_on_Seed_pressed"]
 [connection signal="pressed" from="Water" to="." method="_on_Water_pressed"]
 [connection signal="pressed" from="Nutrients" to="." method="_on_Nutrients_pressed"]
+[connection signal="pressed" from="Journal" to="." method="_on_Journal_pressed"]
 [connection signal="pressed" from="SendToEarthButton" to="." method="_on_SendToEarth_pressed"]
 [connection signal="pressed" from="Map" to="." method="_on_Map_pressed"]

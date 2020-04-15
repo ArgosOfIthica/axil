@@ -45,7 +45,8 @@ __meta__ = {
 }
 
 [node name="textbox_confirm" type="Sprite" parent="."]
-position = Vector2( 970.185, 651.537 )
+position = Vector2( 970.185, 621.749 )
+scale = Vector2( 1, 0.944837 )
 texture = ExtResource( 2 )
 
 [node name="confirm_text" type="Label" parent="."]
@@ -86,14 +87,15 @@ __meta__ = {
 }
 
 [node name="textbox_response" type="Sprite" parent="."]
-position = Vector2( 970.374, 655.098 )
+position = Vector2( 970.374, 625.31 )
+scale = Vector2( 1, 0.944837 )
 texture = ExtResource( 2 )
 
 [node name="closeButton" type="TextureButton" parent="."]
 margin_left = 637.296
-margin_top = 829.553
+margin_top = 785.188
 margin_right = 974.296
-margin_bottom = 976.553
+margin_bottom = 932.188
 rect_scale = Vector2( 2, 2 )
 texture_normal = ExtResource( 6 )
 __meta__ = {
@@ -104,7 +106,7 @@ __meta__ = {
 margin_left = 355.0
 margin_top = 280.0
 margin_right = 1567.0
-margin_bottom = 836.0
+margin_bottom = 808.0
 mouse_filter = 1
 custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
