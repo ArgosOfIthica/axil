@@ -85,7 +85,6 @@ __meta__ = {
 [node name="BG" type="ParallaxBackground" parent="."]
 
 [node name="Spaceship_BG" type="Sprite" parent="BG"]
-visible = false
 position = Vector2( 958.479, 642.121 )
 texture = ExtResource( 5 )
 

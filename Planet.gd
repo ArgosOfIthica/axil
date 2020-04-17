@@ -27,7 +27,9 @@ const starter_planet = {
 	"alienboi": 1,
 	"strangerock" : 1,
 	"smileyboi" : 1,
-	"strugglepot" : 1
+	"strugglepot" : 1,
+	"stitchy" : 1,
+	"ice" : 1
 	}
 	
 

@@ -12,6 +12,7 @@ func goto_map():
 	prepare_map_rendering()
 	show()
 	$BG.get_child(0).show()
+	$Music_BG.play()
 	
 func _ready():
 	$Planet1.locked_image = 'res://assets/planets/Planet_Starter_Gray.png'

@@ -22,7 +22,9 @@ const nutrients_dict = {
 	"alienboi": 13 * hour,
 	"strangerock" :10 * hour,
 	"smileyboi" : 2 * hour,
-	"strugglepot" : 7 * hour
+	"strugglepot" : 7 * hour,
+	"stitchy" : 4 * hour,
+	"ice" : 8 * hour
 	}
 	
 	
@@ -43,7 +45,9 @@ const water_dict = {
 	"alienboi": 13 * hour,
 	"strangerock" :10 * hour,
 	"smileyboi" : 5 * hour,
-	"strugglepot" : 10 * hour
+	"strugglepot" : 10 * hour,
+	"stitchy" : 7 * hour,
+	"ice" : 9 * hour
 	}
 
 const growth_intervals = {
@@ -63,7 +67,9 @@ const growth_intervals = {
 	"alienboi": [1, 12, 40, 250],
 	"strangerock" : [1, 11, 60, 350],
 	"smileyboi" : [1, 9, 30, 120],
-	"strugglepot" : [1, 8, 35, 300]
+	"strugglepot" : [1, 8, 35, 300],
+	"stitchy" : [1, 8, 35, 300],
+	"ice" : [1, 9, 40, 130]
 }
 
 

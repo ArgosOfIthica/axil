@@ -2,16 +2,12 @@
 
 [ext_resource path="res://assets/fonts/nothing_you_could_do/NothingYouCouldDo-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/background/journal_asset.png" type="Texture" id=2]
-[ext_resource path="res://assets/plants/alienboi/3.png" type="Texture" id=3]
+[ext_resource path="res://assets/plants/alienboi/sketch.png" type="Texture" id=3]
 [ext_resource path="res://assets/icons/arrow.png" type="Texture" id=4]
 [ext_resource path="res://Encyclopedia.gd" type="Script" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 120
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=5]
-size = 60
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -23,6 +19,10 @@ size = 60
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=4]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
 size = 60
 font_data = ExtResource( 1 )
 
@@ -51,7 +51,7 @@ margin_left = 994.479
 margin_top = 149.413
 margin_right = 1723.48
 margin_bottom = 506.413
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Growth Rate: very quick
 Water: every 7 hours
@@ -66,7 +66,7 @@ margin_left = 1035.39
 margin_top = 484.328
 margin_right = 1695.39
 margin_bottom = 649.328
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "-Seed found near an asteroid collision site"
 autowrap = true
@@ -79,7 +79,7 @@ margin_left = 1040.71
 margin_top = 675.052
 margin_right = 1876.71
 margin_bottom = 756.052
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "-Has a staring problem"
 __meta__ = {
@@ -91,7 +91,7 @@ margin_left = 1039.46
 margin_top = 787.228
 margin_right = 2109.46
 margin_bottom = 952.228
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "-Occasionally caught 
 phoning home???"
@@ -100,10 +100,10 @@ __meta__ = {
 }
 
 [node name="sketch" type="TextureRect" parent="."]
-margin_left = 312.959
-margin_top = 54.6856
-margin_right = 819.959
-margin_bottom = 977.686
+margin_left = 277.614
+margin_top = 120.556
+margin_right = 817.614
+margin_bottom = 1080.56
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -112,7 +112,7 @@ __meta__ = {
 [node name="BG" type="ParallaxBackground" parent="."]
 
 [node name="bookBG" type="Sprite" parent="BG"]
-position = Vector2( 959.571, 542.922 )
+position = Vector2( 961.178, 542.922 )
 scale = Vector2( 1.00472, 1.01434 )
 texture = ExtResource( 2 )
 
@@ -120,4 +120,7 @@ texture = ExtResource( 2 )
 margin_right = 304.0
 margin_bottom = 198.0
 texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="backbutton" to="." method="_on_backbutton_pressed"]
