@@ -19,6 +19,7 @@ func terminate_choose_scene(choice):
 	emit_signal('choose_plant')
 	hide()
 	$BG.get_child(0).hide()
+	
 
 func _ready():
 	$BG.get_child(0).hide()

@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/fonts/nothing_you_could_do/NothingYouCouldDo-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/background/journal_asset.png" type="Texture" id=2]
 [ext_resource path="res://assets/plants/alienboi/sketch.png" type="Texture" id=3]
 [ext_resource path="res://assets/icons/arrow.png" type="Texture" id=4]
 [ext_resource path="res://Encyclopedia.gd" type="Script" id=5]
+[ext_resource path="res://assets/audio/pamgaea/pamgaea-by-kevin-macleod-from-filmmusic-io.wav" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 120
@@ -123,4 +124,8 @@ texture_normal = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="BG_Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -25.0
 [connection signal="pressed" from="backbutton" to="." method="_on_backbutton_pressed"]

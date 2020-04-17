@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://assets/audio/pamgaea/pamgaea-by-kevin-macleod-from-filmmusic-io.wav" type="AudioStream" id=1]
+[ext_resource path="res://assets/audio/blippy_trance/blippy-trance-by-kevin-macleod-from-filmmusic-io.wav" type="AudioStream" id=1]
 [ext_resource path="res://assets/background/Space-BG.png" type="Texture" id=6]
 [ext_resource path="res://Map.gd" type="Script" id=7]
 [ext_resource path="res://assets/icons/arrow.png" type="Texture" id=8]
@@ -40,6 +40,7 @@ position = Vector2( 996.594, 401.176 )
 [node name="Planet3" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1603.61, 817.575 )
 
-[node name="Music-BG" type="AudioStreamPlayer" parent="."]
+[node name="BG_Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
+volume_db = -29.9
 [connection signal="pressed" from="return_arrow" to="." method="_on_return_arrow_pressed"]

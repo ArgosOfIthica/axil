@@ -5,10 +5,12 @@ signal open_spaceship
 func hide_all():
 	hide()
 	$BG.get_child(0).hide() 
+	$BG_Music.stop()
 
 func goto_encyclopedia():
 	show()
 	$BG.get_child(0).show()
+	$BG_Music.play()
 
 func _ready():
 	hide_all() 

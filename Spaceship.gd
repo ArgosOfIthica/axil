@@ -17,6 +17,7 @@ func goto_spaceship():
 	prepare_ship_rendering()
 	show()
 	$BG.get_child(0).show()
+	$BG_Music.play()
 
 #Internal API
 
@@ -82,9 +83,11 @@ func _on_Main_new_frame():
 func _on_Map_pressed():
 	emit_signal('open_map')
 	$BG/Spaceship_BG.hide()
+	$BG_Music.stop()
 	hide()
 
 func _on_Journal_pressed():
 	emit_signal('open_encyclopedia')
 	$BG/Spaceship_BG.hide()
+	$BG_Music.stop()
 	hide()

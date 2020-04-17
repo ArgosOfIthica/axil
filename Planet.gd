@@ -29,7 +29,8 @@ const starter_planet = {
 	"smileyboi" : 1,
 	"strugglepot" : 1,
 	"stitchy" : 1,
-	"ice" : 1
+	"ice" : 1,
+	"rainbowshine": 1
 	}
 	
 

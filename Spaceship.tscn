@@ -88,10 +88,8 @@ __meta__ = {
 position = Vector2( 958.479, 642.121 )
 texture = ExtResource( 5 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="BG_Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
-autoplay = true
-stream_paused = true
 
 [node name="Pot1" parent="." instance=ExtResource( 2 )]
 position = Vector2( 381.192, 905.991 )
