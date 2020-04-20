@@ -21,9 +21,13 @@ func _process(delta):
 		hours -= 1
 		minutes = 59
 		
-	elif hours < 1 and minutes < 1 and seconds < 1:
-		hide()
-	
+	if hours < 1:
+		hours = 0
+	elif minutes < 1:
+		minutes = 0
+	elif seconds < 1:
+		seconds = 0
+				
 	set_text(str(hours) + ":" + str(minutes) + ":" + str(seconds))
 
 
