@@ -7,6 +7,8 @@ var plant_rarities = null
 var active = false
 
 onready var timer = get_node("Timer")
+const hours = 3600
+const minutes = 60
 
 var locked = true
 
@@ -35,17 +37,12 @@ const starter_planet = {
 	
 
 func _ready():
-	pass
+	$Label.hide()
 	
-#func _process(delta):
-#	if InputEventScreenTouch:
-#		$Timer.wait_time = 5
-#		$Timer.start()
-#		active = true
 
 func _on_Timer_timeout():
-	$Timer.stop()
-	#active = false
+	timer.stop()
+
 
 func render():
 	if locked:
@@ -53,12 +50,14 @@ func render():
 	elif not locked:
 		$Button.set_normal_texture(load(unlocked_image))
 
+
 func give_plant_choices():
 	var choices = [null, null, null]
 	if place == 0:
 		for picks in range(3):
 			choices[picks] = give_plant_from_dict(starter_planet)
 	return choices
+		
 		
 func give_plant_from_dict(planetdict):
 	var total_weight = 0
@@ -71,15 +70,19 @@ func give_plant_from_dict(planetdict):
 		if rng < running_total:
 			return plant
 
+
 func _on_Button_pressed():
 	if !active:
-		$Timer.wait_time = 5
-		$Timer.start()
+		timer.wait_time = 10 #test value only
+		timer.start()
 		active = true
-	if active and $Timer.is_stopped():
+		$Label.show()
+		$Label.SetCountdown(timer.wait_time)
+	if active and timer.is_stopped():
 		var choices = give_plant_choices()
 		get_parent().goto_choose_screen(choices)
 		active = false
+		$Label.hide()
 
 
 
