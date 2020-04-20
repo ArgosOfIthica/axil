@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Choose.tscn" type="PackedScene" id=2]
@@ -6,9 +6,11 @@
 [ext_resource path="res://PlantFactory.gd" type="Script" id=4]
 [ext_resource path="res://Map.tscn" type="PackedScene" id=5]
 [ext_resource path="res://SendToEarth.tscn" type="PackedScene" id=6]
-[ext_resource path="res://State.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Encyclopedia.tscn" type="PackedScene" id=7]
+[ext_resource path="res://HomeScreen.tscn" type="PackedScene" id=8]
 
 [node name="Main" type="Node2D"]
+position = Vector2( 2, 0 )
 script = ExtResource( 1 )
 
 [node name="Choose" parent="." instance=ExtResource( 2 )]
@@ -24,13 +26,18 @@ margin_bottom = -37.6272
 [node name="PlantFactory" type="Node" parent="."]
 script = ExtResource( 4 )
 
+[node name="Encyclopedia" parent="." instance=ExtResource( 7 )]
+
 [node name="Map" parent="." instance=ExtResource( 5 )]
 
 [node name="SendToEarth" parent="." instance=ExtResource( 6 )]
 
-[node name="State" parent="." instance=ExtResource( 7 )]
+[node name="TitleScreen" parent="." instance=ExtResource( 8 )]
+visible = false
 [connection signal="new_frame" from="." to="Spaceship" method="_on_Main_new_frame"]
 [connection signal="choose_plant" from="Choose" to="." method="_CHOOSE_choose_plant"]
+[connection signal="open_encyclopedia" from="Spaceship" to="." method="_on_Spaceship_open_encyclopedia"]
 [connection signal="open_map" from="Spaceship" to="." method="_on_Spaceship_open_map"]
 [connection signal="send_to_earth" from="Spaceship" to="." method="_on_Spaceship_send_to_earth"]
+[connection signal="open_spaceship" from="Encyclopedia" to="." method="_on_Encyclopedia_open_spaceship"]
 [connection signal="open_spaceship" from="Map" to="." method="_on_Map_open_spaceship"]
