@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Planet.gd" type="Script" id=1]
 [ext_resource path="res://assets/planets/Planet_Starter_Gray.png" type="Texture" id=2]
+[ext_resource path="res://Label.gd" type="Script" id=3]
 
 [node name="Planet" type="Node2D"]
 script = ExtResource( 1 )
@@ -21,12 +22,18 @@ __meta__ = {
 wait_time = 20.0
 
 [node name="Label" type="Label" parent="."]
-margin_left = -188.469
-margin_top = 230.575
-margin_right = 194.531
-margin_bottom = 299.575
+margin_left = -267.672
+margin_top = -174.757
+margin_right = 115.328
+margin_bottom = -105.757
+rect_scale = Vector2( 5, 5 )
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Countdown" type="Timer" parent="Label"]
+autostart = true
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Label/Countdown" to="Label" method="_on_Countdown_timeout"]
