@@ -90,6 +90,7 @@ texture = ExtResource( 5 )
 
 [node name="BG_Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
+volume_db = -25.0
 
 [node name="Pot1" parent="." instance=ExtResource( 2 )]
 position = Vector2( 381.192, 905.991 )

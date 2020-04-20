@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/background/titlescreenBG.png" type="Texture" id=2]
 [ext_resource path="res://assets/icons/titlescreen_text_01.png" type="Texture" id=3]
 
-[node name="HomeScreen" type="Control"]
+[node name="TitleScreen" type="Control"]
 margin_right = 40.0
 margin_bottom = 40.0
 __meta__ = {
@@ -31,3 +31,5 @@ __meta__ = {
 [node name="logo" type="Sprite" parent="."]
 position = Vector2( 968.781, 500.318 )
 texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
