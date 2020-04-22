@@ -36,7 +36,8 @@ const notes = {
 	"strugglepot" : [],
 	"stitchy" : [],
 	"ice" : [],
-	"rainbowshine": []
+	"rainbowshine": [],
+	"boomboi": []
 	}
 	
 const collection = {
@@ -59,7 +60,8 @@ const collection = {
 	"strugglepot" : 0,
 	"stitchy" : 0,
 	"ice" : 0,
-	"rainbowshine": 0
+	"rainbowshine": 0,
+	"boomboi": 0
 	}
 
 func _on_backbutton_pressed():
