@@ -17,30 +17,30 @@ func _ready():
 
 #water/nutrients --> plant.water/3600 + "hours"
 const notes = {
-	"fire" : ["very hot", "dummy hot", "dang that hot"],
-	"water": [],
-	"grass": [],
-	"spoon": [],
-	"redspider": [],
-	"digiveg": [],
-	"kniveleaves": [],
-	"livingblub": [],
-	"potatocoon": [],
-	"stonemoss": [],
-	"purpletentacles": [],
-	"firefleur" : [],
-	"hand": [],
-	"alienboi": [],
-	"strangerock" : [],
-	"smileyboi" : [],
-	"strugglepot" : [],
-	"stitchy" : [],
-	"ice" : [],
+	"fire" : ["Raises the temperature in the room", "Makes a good torch-like light", 3],
+	"water": ["this plant jiggles as if full of water", 2, 3],
+	"grass": ["cubes glow in dim light", "little blocks of nutrients! Great for salads", 3],
+	"spoon": ["collects water to pour over itself", "appears upset when someone tries to water it", 3],
+	"redspider": ["eyes appear to blink occasionally", "each spider bristles angrily if they get dirt in their eyes", 3],
+	"digiveg": ["weird transmissions can be heard from this plant", 2, 3],
+	"kniveleaves": ["This one is very sharp", "Helps you peel your potatoes", 3],
+	"livingblub": ["capable of turning itself off and on", "blinks at us in patterns, a code?", 3],
+	"potatocoon": ["the plant appears to repair itself rapidly when it is damaged", 2, 3],
+	"stonemoss": ["a strange aura is felt in it's presence", 2, 3],
+	"purpletentacles": ["harmless, but likes to steal small objects", "will let go if you tickle it a bit", 3],
+	"firefleur" : ["the fiery glow can be blindingly bright at times", 2, 3],
+	"hand": ["Will gladly shake your hand", "Knows its manners and always lends a helping hand", 3],
+	"alienboi": ["It is like growing your own little alien friend", "Not the best at giving high fives", 3],
+	"strangerock" : ["ominous red liquid seeps out sometimes?", "red patches absorb small objects, which are never seen again", 3],
+	"smileyboi" : ["sometimes.. I think I hear it humming?", 2, 3],
+	"strugglepot" : ["Balance game is on point", "Good at worrying anyone who is in the room", 3],
+	"stitchy" : ["Patches up any holes in clothes", "Keep a safe distance if it’s bored", 3],
+	"ice" : ["it doesn't seem to melt at any temperature", 2, 3],
 	"rainbowshine": [],
-	"boomboi": []
+	"boomboi": ["smells a lot like gunpowder and iron", 2, 3]
 	}
 	
-const collection = {
+var counter = {
 	"fire" : 0,
 	"water": 0,
 	"grass": 0,
@@ -63,6 +63,14 @@ const collection = {
 	"rainbowshine": 0,
 	"boomboi": 0
 	}
+
+var collectedplants = []
+
+func set_page():
+	if collectedplants != null:
+		pass
+	else:
+		pass
 
 func _on_backbutton_pressed():
 	hide_all()

@@ -50,6 +50,11 @@ func _on_yesButton_pressed():
 	$response_text.show()
 	$closeButton.show()
 	$response_text.text = response_dict[get_parent().pots[selected_pot].plant.species]
+	get_parent().get_parent().get_child(3).counter[get_parent().pots[selected_pot].plant.species] += 1
+	if (get_parent().get_parent().get_child(3).counter[get_parent().pots[selected_pot].plant.species] == 1):
+		get_parent().get_parent().get_child(3).collectedplants.append(get_parent().pots[selected_pot].plant.species)
+	print(get_parent().get_parent().get_child(3).counter[get_parent().pots[selected_pot].plant.species])
+	print(get_parent().get_parent().get_child(3).collectedplants)
 	get_parent().pots[selected_pot].plant = null
 	
 func _on_closeButton_pressed():
@@ -75,8 +80,8 @@ const response_dict = {
 	"strugglepot" : "I hope you’re doing well! We just unpacked your newest plant and we have been quite perplexed by its physiology. The cups are always seeming to shift and wobble, and to make things more difficult, there is a tiny teacup bud that is making it even harder to balance. We have been cheering this plant on as we study it. Anyway, we hope you can keep sending us plants!",
 	"stitchy" : "What a wonderful surprise we got when we opened your newest specimen! I had torn my lab coat pocket a week or so ago, and your little plant friend patched it right up! It does seem to get bored if it isn’t sewing and gets a bit stabby, but we will budget for a few bolts of fabric. Hope you can keep sending us your findings!",
 	"ice" : "Hello again, I am hoping that you are a bit warmer out in the vacuum of space than we are here. The lab is about 20 below zero and our hot water pipe burst yesterday. I think this new plant you have sent is a bit frostier than we had first thought. Oh well, time to break out the winter coats and mittens!",
-	"rainbowshine": "Thanks! Keep 'em coming!",
-	"boomboi": "Thank you! Keep 'em coming!"
+	"rainbowshine": "Hello! I’m writing to let you know we got your newest plant, and my goodness, is it breathtaking. One of our technicians was shining their flashlight in the lab (definitely not making shadow puppets) and discovered the iridescence of the leaves on this specimen. It’s truly beautiful. Anywho, your diligence to finding plants is much appreciated!",
+	"boomboi": "Hello there! How did you know that we were throwing a surprise party this week? Your newest plant had wonderful timing when it exploded, we had just brought out the cake. The bud made great confetti. Maybe we could create a natural party popper.... hmmm. Yes. No matter, I hope you can keep sending more plants!"
 	}
 
 
