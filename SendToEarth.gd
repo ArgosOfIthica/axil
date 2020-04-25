@@ -42,6 +42,7 @@ func selection(chosen_pot):
 	
 
 func _on_yesButton_pressed():
+	var encyclopedia_path = get_parent().get_parent().get_child(3)
 	$textbox_confirm.hide()
 	$confirm_text.hide()
 	$yesButton.hide()
@@ -50,11 +51,11 @@ func _on_yesButton_pressed():
 	$response_text.show()
 	$closeButton.show()
 	$response_text.text = response_dict[get_parent().pots[selected_pot].plant.species]
-	get_parent().get_parent().get_child(3).counter[get_parent().pots[selected_pot].plant.species] += 1
-	if (get_parent().get_parent().get_child(3).counter[get_parent().pots[selected_pot].plant.species] == 1):
-		get_parent().get_parent().get_child(3).collectedplants.append(get_parent().pots[selected_pot].plant.species)
-	print(get_parent().get_parent().get_child(3).counter[get_parent().pots[selected_pot].plant.species])
-	print(get_parent().get_parent().get_child(3).collectedplants)
+	encyclopedia_path.counter[get_parent().pots[selected_pot].plant.species] += 1
+	if (encyclopedia_path.counter[get_parent().pots[selected_pot].plant.species] == 1):
+		encyclopedia_path.collectedplants.append(get_parent().pots[selected_pot].plant.species)
+	print(encyclopedia_path.counter[get_parent().pots[selected_pot].plant.species])
+	print(encyclopedia_path.collectedplants)
 	get_parent().pots[selected_pot].plant = null
 	
 func _on_closeButton_pressed():
