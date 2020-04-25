@@ -6,12 +6,13 @@ signal new_frame
 var opening_scene = "spaceship"
 
 func _ready():
-	choose_opening()
-	#load_game()
-	#if opening_scene == "choose":
-	#	choose_opening()
-	#else:
-	#	to_spaceship()
+	$TitleScreen.goto_titlescreen()
+	#choose_opening()
+	##load_game()
+	##if opening_scene == "choose":
+	##	choose_opening()
+	##else:
+	##	to_spaceship()
 
 func choose_opening():
 	$Choose.choices[0] = instantiate_plant("water")
@@ -88,4 +89,7 @@ func _on_Spaceship_open_encyclopedia():
 	to_encyclopedia()
 
 func _on_Encyclopedia_open_spaceship():
+	to_spaceship()
+
+func _on_TitleScreen_open_spaceship():
 	to_spaceship()

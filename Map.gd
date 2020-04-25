@@ -39,5 +39,4 @@ func _on_return_arrow_pressed():
 	
 func goto_choose_screen(plant_list):
 	hide_all()
-	$BG_Music.stop()
 	get_parent().to_choose(plant_list)

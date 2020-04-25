@@ -33,6 +33,7 @@ func goto_spaceship():
 
 func _ready():
 	hide()
+	$BG.get_child(0).hide()
 	pots = [$Pot1, $Pot2, $Pot3]
 	for pot in range(len(pots)):
 		pots[pot].place = pot

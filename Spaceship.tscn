@@ -62,6 +62,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="BG" type="ParallaxBackground" parent="."]
+
+[node name="Spaceship_BG" type="Sprite" parent="BG"]
+position = Vector2( 958.479, 642.121 )
+texture = ExtResource( 5 )
+
+[node name="stars1" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.927049 )
+position = Vector2( 950, 640 )
+texture = ExtResource( 12 )
+
+[node name="stars2" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 950, 640 )
+texture = ExtResource( 11 )
+
+[node name="stars3" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.527868 )
+position = Vector2( 950, 640 )
+texture = ExtResource( 13 )
+
 [node name="Seed" type="Button" parent="."]
 margin_left = 50.0
 margin_top = 425.0
@@ -125,27 +146,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BG" type="ParallaxBackground" parent="."]
-
-[node name="Spaceship_BG" type="Sprite" parent="BG"]
-position = Vector2( 958.479, 642.121 )
-texture = ExtResource( 5 )
-
-[node name="stars1" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.927049 )
-position = Vector2( 950, 640 )
-texture = ExtResource( 12 )
-
-[node name="stars2" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 950, 640 )
-texture = ExtResource( 11 )
-
-[node name="stars3" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.527868 )
-position = Vector2( 950, 640 )
-texture = ExtResource( 13 )
-
 [node name="BG_Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
 volume_db = -25.0
@@ -160,7 +160,6 @@ position = Vector2( 964.058, 917.688 )
 position = Vector2( 1526.2, 916.37 )
 
 [node name="SendToEarth" parent="." instance=ExtResource( 6 )]
-visible = false
 margin_left = 8.13379
 margin_top = 6.00815e-05
 margin_right = 8.13379
