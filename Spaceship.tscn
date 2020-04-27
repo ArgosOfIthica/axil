@@ -18,7 +18,8 @@
 
 [sub_resource type="Animation" id=2]
 resource_name = "spaceship_stars"
-length = 15.0
+length = 50.0
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("stars1:modulate")
 tracks/0/interp = 1
@@ -26,10 +27,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.8, 2.6, 4.4, 5.5, 6, 7.6, 9, 10.1, 11.3, 12, 14.5, 14.9 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 1.6, 2.4, 6, 7.3, 11.7, 12.9, 16.7, 18.1, 22.8, 24.2, 27.8, 29.5, 35.3, 36.7, 37.9, 39, 43.2, 44.7, 47, 48.1, 49.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("stars2:modulate")
@@ -38,10 +39,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 1.2, 2.6, 3.9, 4.3, 5, 5.8, 6.6, 7.4, 8.8, 9.9, 11.2, 12.4, 13.1, 13.8, 14.6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 1.2, 1.9, 5.1, 6.2, 13.2, 13.9, 18.1, 19.5, 21.7, 23.1, 27.2, 28.7, 33.5, 34.8, 38.6, 39.9, 41.1, 42.4, 44.7, 46 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("stars3:modulate")
@@ -50,10 +51,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.4, 1.2, 2, 2.6, 3.8, 4.9, 5.8, 6.4, 7.4, 8.7, 9.8, 10.3, 12.1, 13.7, 14.8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 4.2, 5.4, 8.5, 9.9, 10.5, 11.6, 15.9, 17.9, 20.7, 22.2, 23.2, 26.1, 27.7, 32.7, 33.9, 43.8, 44.8, 47.7, 48.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [node name="Spaceship" type="Control"]
@@ -65,22 +66,21 @@ __meta__ = {
 [node name="BG" type="ParallaxBackground" parent="."]
 
 [node name="Spaceship_BG" type="Sprite" parent="BG"]
-position = Vector2( 958.479, 642.121 )
+position = Vector2( 960, 640 )
 texture = ExtResource( 5 )
 
 [node name="stars1" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.927049 )
-position = Vector2( 950, 640 )
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 960, 680 )
 texture = ExtResource( 12 )
 
 [node name="stars2" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 950, 640 )
+position = Vector2( 960, 680 )
 texture = ExtResource( 11 )
 
 [node name="stars3" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.527868 )
-position = Vector2( 950, 640 )
+modulate = Color( 1, 1, 1, 0.488321 )
+position = Vector2( 960, 680 )
 texture = ExtResource( 13 )
 
 [node name="Seed" type="Button" parent="."]
@@ -160,12 +160,15 @@ position = Vector2( 964.058, 917.688 )
 position = Vector2( 1526.2, 916.37 )
 
 [node name="SendToEarth" parent="." instance=ExtResource( 6 )]
+visible = false
 margin_left = 8.13379
 margin_top = 6.00815e-05
 margin_right = 8.13379
 margin_bottom = 6.00815e-05
 
 [node name="stars" type="AnimationPlayer" parent="."]
+autoplay = "spaceship_stars"
+playback_speed = 0.5
 anims/spaceship_stars = SubResource( 2 )
 [connection signal="pressed" from="Seed" to="." method="_on_Seed_pressed"]
 [connection signal="pressed" from="Water" to="." method="_on_Water_pressed"]

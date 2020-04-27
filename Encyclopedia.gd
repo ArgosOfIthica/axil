@@ -99,9 +99,18 @@ func set_page(page_num):
 		var species = collectedplants[page_num]
 		$sketch.set_texture(load("res://assets/plants/" + collectedplants[page_num] + '/sketch.png'))
 		$name.text = names[species]
-		$fact1.text = notes[species][0]
-		$fact2.text = notes[species][1]
-		$fact3.text = notes[species][2]
+		if(counter[species] >= 2):
+			$fact1.text = "• " + notes[species][0]
+		else:
+			$fact1.text = ""
+		if(counter[species] >= 3):
+			$fact2.text = "• " + notes[species][1]
+		else:
+			$fact2.text = ""
+		if(counter[species] >= 4):
+			$fact3.text = "• " + notes[species][2]
+		else:
+			$fact3.text = ""
 
 
 

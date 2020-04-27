@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/fonts/nothing_you_could_do/NothingYouCouldDo-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/background/journal_asset.png" type="Texture" id=2]
@@ -11,7 +11,7 @@ size = 100
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 60
+size = 50
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -22,7 +22,19 @@ font_data = ExtResource( 1 )
 size = 50
 font_data = ExtResource( 1 )
 
+[sub_resource type="DynamicFont" id=8]
+size = 50
+font_data = ExtResource( 1 )
+
 [sub_resource type="DynamicFont" id=5]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
 size = 50
 font_data = ExtResource( 1 )
 
@@ -33,6 +45,13 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="BG" type="ParallaxBackground" parent="."]
+
+[node name="bookBG" type="Sprite" parent="BG"]
+position = Vector2( 961.178, 542.922 )
+scale = Vector2( 1.00472, 1.01434 )
+texture = ExtResource( 2 )
 
 [node name="name" type="Label" parent="."]
 margin_left = 203.0
@@ -54,20 +73,53 @@ margin_right = 1723.48
 margin_bottom = 506.413
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Growth Rate: very quick
-Water: every 7 hours
-Nutrients: every 4 hours
+text = "Growth Rate: 
+Water: 
+Nutrients: 
 Notes:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="fact1" type="Label" parent="."]
-margin_left = 981.0
-margin_top = 484.0
-margin_right = 1696.0
-margin_bottom = 649.0
+[node name="growthrate" type="Label" parent="."]
+margin_left = 1350.0
+margin_top = 150.0
+margin_right = 1555.0
+margin_bottom = 217.0
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "unknown"
+
+[node name="water" type="Label" parent="."]
+margin_left = 1175.0
+margin_top = 215.0
+margin_right = 1501.0
+margin_bottom = 282.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "unknown"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="nutrient" type="Label" parent="."]
+margin_left = 1250.0
+margin_top = 290.0
+margin_right = 1455.0
+margin_bottom = 357.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "unknown"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fact1" type="Label" parent="."]
+margin_left = 990.0
+margin_top = 450.0
+margin_right = 1690.0
+margin_bottom = 600.0
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 __meta__ = {
@@ -76,10 +128,10 @@ __meta__ = {
 
 [node name="fact2" type="Label" parent="."]
 margin_left = 990.0
-margin_top = 627.0
-margin_right = 1694.0
-margin_bottom = 782.0
-custom_fonts/font = SubResource( 4 )
+margin_top = 625.0
+margin_right = 1690.0
+margin_bottom = 775.0
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 __meta__ = {
@@ -87,11 +139,11 @@ __meta__ = {
 }
 
 [node name="fact3" type="Label" parent="."]
-margin_left = 997.0
-margin_top = 782.0
-margin_right = 1691.0
-margin_bottom = 983.0
-custom_fonts/font = SubResource( 5 )
+margin_left = 990.0
+margin_top = 800.0
+margin_right = 1690.0
+margin_bottom = 950.0
+custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 __meta__ = {
@@ -99,20 +151,13 @@ __meta__ = {
 }
 
 [node name="sketch" type="TextureRect" parent="."]
-margin_left = 277.614
-margin_top = 120.556
-margin_right = 817.614
-margin_bottom = 1080.56
+margin_left = 300.0
+margin_top = 125.0
+margin_right = 840.0
+margin_bottom = 1085.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="BG" type="ParallaxBackground" parent="."]
-
-[node name="bookBG" type="Sprite" parent="BG"]
-position = Vector2( 961.178, 542.922 )
-scale = Vector2( 1.00472, 1.01434 )
-texture = ExtResource( 2 )
 
 [node name="backbutton" type="TextureButton" parent="."]
 margin_right = 304.0
