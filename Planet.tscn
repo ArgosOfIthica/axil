@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Planet.gd" type="Script" id=1]
 [ext_resource path="res://assets/planets/Planet_Starter_Gray.png" type="Texture" id=2]
 [ext_resource path="res://Label.gd" type="Script" id=3]
+[ext_resource path="res://assets/icons/ready_to_collect.png" type="Texture" id=4]
 
 [node name="Planet" type="Node2D"]
 script = ExtResource( 1 )
@@ -34,6 +35,10 @@ __meta__ = {
 
 [node name="Countdown" type="Timer" parent="Label"]
 autostart = true
+
+[node name="readytocollect" type="Sprite" parent="."]
+position = Vector2( -200, -200 )
+texture = ExtResource( 4 )
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Label/Countdown" to="Label" method="_on_Countdown_timeout"]

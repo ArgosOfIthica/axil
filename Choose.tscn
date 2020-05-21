@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Choose.gd" type="Script" id=1]
 [ext_resource path="res://assets/background/planet_3.png" type="Texture" id=2]
+[ext_resource path="res://assets/background/choose_text_box.png" type="Texture" id=3]
 [ext_resource path="res://assets/fonts/oswald/Oswald-Regular.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=1]
-size = 42
+size = 45
 font_data = ExtResource( 5 )
 
 [node name="Choose" type="Control"]
@@ -16,20 +17,6 @@ margin_top = 4.0
 margin_right = -8.0
 margin_bottom = 8.0
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="."]
-margin_left = 37.7926
-margin_top = 36.7707
-margin_right = 1868.79
-margin_bottom = 141.771
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Your robotic explorer has reported back! It has found 3 seeds of interest, but it only has room to store one."
-align = 1
-valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -64,12 +51,31 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="textbox" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0.576471 )
+position = Vector2( 957.133, 90.1255 )
+texture = ExtResource( 3 )
+
 [node name="BG" type="ParallaxBackground" parent="."]
 
 [node name="planetBG" type="Sprite" parent="BG"]
 position = Vector2( 961.639, 539.852 )
 scale = Vector2( 1.00469, 1.00834 )
 texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 37.7926
+margin_top = 36.7707
+margin_right = 1868.79
+margin_bottom = 141.771
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.545098, 1, 0.713726, 1 )
+text = "Your robotic explorer has reported back! It has found 3 seeds of interest, but it only has room to store one."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Button_3" to="." method="_on_Button_3_pressed"]
 [connection signal="pressed" from="Button_2" to="." method="_on_Button_2_pressed"]
 [connection signal="pressed" from="Button_1" to="." method="_on_Button_1_pressed"]

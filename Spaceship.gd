@@ -41,16 +41,20 @@ func _ready():
 	
 func _on_Seed_pressed():
 	selected = "seed"
+
 	
 func _on_Water_pressed():
 	selected = "water"
-	
+	$Water.set_normal_texture(load("res://assets/icons/icon_water_clicked.png"))
+
 func _on_Nutrients_pressed():
 	selected = "nutrients"
+	$Nutrients.set_normal_texture(load("res://assets/icons/icon_nutrients_clicked.png"))
 
 func _on_SendToEarth_pressed():
 	$SendToEarth.goto_sendtoearth()
 	selected = "send"
+	$SendToEarthButton.set_normal_texture(load("res://assets/icons/icon_send_earth_clicked.png"))
 
 func handle_pot_selection(chosen_pot):
 	if selected == "seed" and seedling != null:
@@ -70,20 +74,24 @@ func select_seed(chosen_pot):
 		prepare_ship_rendering()
 		
 func water_plant(chosen_pot):
-	pots[chosen_pot].plant.water_the_plant()
-	selected = null
+	if(pots[chosen_pot].plant != null):
+		pots[chosen_pot].plant.water_the_plant()
+		selected = null
+	$Water.set_normal_texture(load("res://assets/icons/icon_water.png"))
 	prepare_ship_rendering()
 
 func add_nutrients(chosen_pot):
-	pots[chosen_pot].plant.nutrient_the_plant()
-	selected = null
+	if(pots[chosen_pot].plant != null):
+		pots[chosen_pot].plant.nutrient_the_plant()
+		selected = null
+	$Nutrients.set_normal_texture(load("res://assets/icons/icon_nutrients.png"))
 	prepare_ship_rendering()
 
 func prepare_ship_rendering():
 	if seedling != null:
 		$Seed.set_button_icon(load(seedling.seedling_image_path))
 	else:
-		$Seed.set_button_icon(load("res://icon.png"))
+		$Seed.set_button_icon(load("res://assets/icons/placeholder.png"))
 	pots[0].report_plant()
 	pots[1].report_plant()
 	pots[2].report_plant()
@@ -92,6 +100,7 @@ func _on_Main_new_frame():
 	prepare_ship_rendering()
 
 func _on_Map_pressed():
+	
 	emit_signal('open_map')
 	$BG/Spaceship_BG.hide()
 	$BG_Music.stop()

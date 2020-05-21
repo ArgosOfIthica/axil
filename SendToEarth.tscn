@@ -1,11 +1,12 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://SendToEarth.gd" type="Script" id=1]
-[ext_resource path="res://assets/background/textboxBG.png" type="Texture" id=2]
+[ext_resource path="res://assets/fonts/oswald/Oswald-MediumItalic.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/fonts/oswald/Oswald-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/icons/denybox.png" type="Texture" id=4]
 [ext_resource path="res://assets/icons/confirmbox.png" type="Texture" id=5]
 [ext_resource path="res://assets/icons/nextbutton.png" type="Texture" id=6]
+[ext_resource path="res://assets/background/choose_text_box.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -17,7 +18,12 @@ font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 80
+extra_spacing_bottom = 50
 font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 80
+font_data = ExtResource( 2 )
 
 [node name="SendToEarth" type="Control"]
 script = ExtResource( 1 )
@@ -26,28 +32,29 @@ __meta__ = {
 }
 
 [node name="textbox_which" type="Sprite" parent="."]
-position = Vector2( 982.558, 113.307 )
-scale = Vector2( 1, 0.2 )
-texture = ExtResource( 2 )
+modulate = Color( 1, 1, 1, 0.823529 )
+position = Vector2( 955.939, 103.166 )
+scale = Vector2( 0.8, 1 )
+texture = ExtResource( 7 )
 
 [node name="which_plant_text" type="Label" parent="."]
-margin_left = 395.729
-margin_top = 23.6761
-margin_right = 1559.73
-margin_bottom = 202.676
+margin_left = 394.197
+margin_top = 70.6055
+margin_right = 1558.2
+margin_bottom = 158.605
 custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Which plant would you like to send back to Earth?
-(or click the Earth button again to cancel)"
+custom_colors/font_color = Color( 0.360784, 1, 0.686275, 1 )
+text = "Which plant would you like to send back to Earth?"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="textbox_confirm" type="Sprite" parent="."]
-position = Vector2( 970.185, 621.749 )
-scale = Vector2( 1, 0.944837 )
-texture = ExtResource( 2 )
+modulate = Color( 1, 1, 1, 0.823529 )
+position = Vector2( 967.839, 578.41 )
+scale = Vector2( 1, 7 )
+texture = ExtResource( 7 )
 
 [node name="confirm_text" type="Label" parent="."]
 margin_left = 340.01
@@ -55,7 +62,7 @@ margin_top = 340.01
 margin_right = 1545.01
 margin_bottom = 617.01
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.341176, 1, 0.643137, 1 )
 text = "Would you like to send this plant 
 back to Earth?"
 align = 1
@@ -87,9 +94,10 @@ __meta__ = {
 }
 
 [node name="textbox_response" type="Sprite" parent="."]
-position = Vector2( 970.374, 625.31 )
-scale = Vector2( 1, 0.944837 )
-texture = ExtResource( 2 )
+modulate = Color( 1, 1, 1, 0.823529 )
+position = Vector2( 967.839, 578.41 )
+scale = Vector2( 1, 7 )
+texture = ExtResource( 7 )
 
 [node name="closeButton" type="TextureButton" parent="."]
 margin_left = 637.296
@@ -109,10 +117,18 @@ margin_right = 1567.0
 margin_bottom = 808.0
 mouse_filter = 1
 custom_fonts/normal_font = SubResource( 3 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/default_color = Color( 0.415686, 1, 0.698039, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="incoming" type="Label" parent="."]
+margin_left = 120.419
+margin_top = 153.377
+margin_right = 823.419
+margin_bottom = 263.377
+custom_fonts/font = SubResource( 4 )
+text = "Incoming Transmission"
 [connection signal="pressed" from="yesButton" to="." method="_on_yesButton_pressed"]
 [connection signal="pressed" from="noButton" to="." method="_on_noButton_pressed"]
 [connection signal="pressed" from="closeButton" to="." method="_on_closeButton_pressed"]

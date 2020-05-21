@@ -14,6 +14,9 @@ func goto_sendtoearth():
 	$textbox_response.hide()
 	$response_text.hide()
 	$closeButton.hide()
+	$textbox_response.hide()
+	$incoming.hide()
+	
 
 func _ready():
 	hide()
@@ -24,6 +27,7 @@ func selection(chosen_pot):
 	$which_plant_text.hide()
 	$textbox_confirm.show()
 	selected_pot = chosen_pot
+	get_parent().get_child(8).set_normal_texture(load("res://assets/icons/icon_send_earth.png"))
 	if get_parent().pots[selected_pot].plant != null:
 		if get_parent().pots[selected_pot].plant.stage == 3:
 			$confirm_text.text = "Would you like to send this plant back to Earth?"
@@ -50,6 +54,7 @@ func _on_yesButton_pressed():
 	$textbox_response.show()
 	$response_text.show()
 	$closeButton.show()
+	$incoming.show()
 	$response_text.text = response_dict[get_parent().pots[selected_pot].plant.species]
 	encyclopedia_path.counter[get_parent().pots[selected_pot].plant.species] += 1
 	if (encyclopedia_path.counter[get_parent().pots[selected_pot].plant.species] == 1):
@@ -82,7 +87,8 @@ const response_dict = {
 	"stitchy" : "What a wonderful surprise we got when we opened your newest specimen! I had torn my lab coat pocket a week or so ago, and your little plant friend patched it right up! It does seem to get bored if it isn’t sewing and gets a bit stabby, but we will budget for a few bolts of fabric. Hope you can keep sending us your findings!",
 	"ice" : "Hello again, I am hoping that you are a bit warmer out in the vacuum of space than we are here. The lab is about 20 below zero and our hot water pipe burst yesterday. I think this new plant you have sent is a bit frostier than we had first thought. Oh well, time to break out the winter coats and mittens!",
 	"rainbowshine": "Hello! I’m writing to let you know we got your newest plant, and my goodness, is it breathtaking. One of our technicians was shining their flashlight in the lab (definitely not making shadow puppets) and discovered the iridescence of the leaves on this specimen. It’s truly beautiful. Anywho, your diligence to finding plants is much appreciated!",
-	"boomboi": "Hello there! How did you know that we were throwing a surprise party this week? Your newest plant had wonderful timing when it exploded, we had just brought out the cake. The bud made great confetti. Maybe we could create a natural party popper.... hmmm. Yes. No matter, I hope you can keep sending more plants!"
+	"boomboi": "Hello there! How did you know that we were throwing a surprise party this week? Your newest plant had wonderful timing when it exploded, we had just brought out the cake. The bud made great confetti. Maybe we could create a natural party popper.... hmmm. Yes. No matter, I hope you can keep sending more plants!",
+	"coffeebiote": "Hello! I er, regret to inform you that the container you sent with your last specimen broke... the poor plant was so distressed. Until it saw my freshly cleaned coffee mug. Now all it does is hug it and make a purring noise while we work. It also likes to tickle us if we get too close to it. What an interesting little fellow. If you have any spare mugs on your ship, please send one along with your next specimen!"
 	}
 
 

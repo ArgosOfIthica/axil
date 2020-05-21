@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/audio/blippy_trance/blippy-trance-by-kevin-macleod-from-filmmusic-io.wav" type="AudioStream" id=1]
+[ext_resource path="res://assets/fonts/oswald/Oswald-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/background/choose_text_box.png" type="Texture" id=3]
 [ext_resource path="res://assets/background/Space-BG.png" type="Texture" id=6]
 [ext_resource path="res://Map.gd" type="Script" id=7]
 [ext_resource path="res://assets/icons/arrow.png" type="Texture" id=8]
 [ext_resource path="res://Planet.tscn" type="PackedScene" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 63
+font_data = ExtResource( 2 )
 
 [node name="Map" type="Control"]
 margin_right = 40.0
@@ -19,10 +25,10 @@ stream = ExtResource( 1 )
 volume_db = -29.9
 
 [node name="return_arrow" type="TextureButton" parent="."]
-margin_left = 30.4803
-margin_top = 39.3405
-margin_right = 327.48
-margin_bottom = 229.34
+margin_left = -10.4633
+margin_top = -3.38329
+margin_right = 286.537
+margin_bottom = 186.617
 texture_normal = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -39,8 +45,26 @@ texture = ExtResource( 6 )
 position = Vector2( 382.179, 799.896 )
 
 [node name="Planet2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 996.594, 401.176 )
+position = Vector2( 994.814, 427.878 )
 
 [node name="Planet3" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1603.61, 817.575 )
+
+[node name="textbox" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.494118 )
+position = Vector2( 959.505, 87.2277 )
+scale = Vector2( 0.78, 1 )
+texture = ExtResource( 3 )
+
+[node name="textwhere" type="Label" parent="."]
+margin_left = 2.2196
+margin_top = 40.9222
+margin_right = 1923.22
+margin_bottom = 126.922
+custom_fonts/font = SubResource( 1 )
+text = "Where would you like to send your rover to collect seeds?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="return_arrow" to="." method="_on_return_arrow_pressed"]

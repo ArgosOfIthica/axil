@@ -2,12 +2,12 @@ extends Node
 
 
 const minute = 60
-const hour = 3600
+const hour = 10 #this is just for the demo, actual value is 3600
 const assets_folder = "res://assets/plants/"
 
 const nutrients_dict = {
 	"fire" : 15 * hour ,
-	"water" : 10 ,#test value only
+	"water" : 10 * hour,
 	"grass" : 11 * hour,
 	"spoon" : 6 * hour,
 	"redspider": 18 * hour,
@@ -26,13 +26,14 @@ const nutrients_dict = {
 	"stitchy" : 4 * hour,
 	"ice" : 8 * hour,
 	"rainbowshine" : 12 * hour,
-	"boomboi": 10 * hour
+	"boomboi": 10 * hour,
+	"coffeebiote": 9 * hour
 	}
 	
 	
 const water_dict = {
 	"fire" : 11 * hour ,
-	"water" : 8  ,#test value only
+	"water" : 8  * hour,
 	"grass" : 6 * hour,
 	"spoon" : 16 * hour,
 	"redspider" : 9 * hour,
@@ -51,31 +52,33 @@ const water_dict = {
 	"stitchy" : 7 * hour,
 	"ice" : 9 * hour,
 	"rainbowshine" : 7 * hour,
-	"boomboi": 2 * hour
+	"boomboi": 2 * hour,
+	"coffeebiote": 5 * hour
 	}
 
 const growth_intervals = {
-	"fire" : [1, 17, 45, 200],
-	"grass": [1, 9, 30, 120],
-	"water": [1, 6, 24, 60],
-	"spoon": [1, 8, 35, 300],
-	"redspider": [1, 9, 35, 250],
-	"digiveg": [1, 16, 250, 250],
-	"kniveleaves":[1, 11, 60, 350],
-	"livingblub":[1, 12, 40, 250],
-	"potatocoon":[1, 9, 40, 130],
-	"stonemoss": [1, 12, 40, 250] ,
-	"purpletentacles": [1, 9, 40, 130], 
-	"firefleur": [1, 17, 45, 200],
-	"hand": [1, 9, 30, 120],
-	"alienboi": [1, 12, 40, 250],
-	"strangerock" : [1, 11, 60, 350],
-	"smileyboi" : [1, 9, 30, 120],
-	"strugglepot" : [1, 8, 35, 300],
-	"stitchy" : [1, 8, 35, 300],
-	"ice" : [1, 9, 40, 130],
-	"rainbowshine" : [1, 16, 250, 250],
-	"boomboi": [1, 17, 45, 200]
+	"fire" : [5, 17, 45, 200],
+	"grass": [5, 9, 30, 120],
+	"water": [5, 6, 24, 60],
+	"spoon": [5, 8, 35, 300],
+	"redspider": [5, 9, 35, 250],
+	"digiveg": [5, 16, 250, 250],
+	"kniveleaves":[5, 11, 60, 350],
+	"livingblub":[5, 12, 40, 250],
+	"potatocoon":[5, 9, 40, 130],
+	"stonemoss": [5, 12, 40, 250] ,
+	"purpletentacles": [5, 9, 40, 130], 
+	"firefleur": [5, 17, 45, 200],
+	"hand": [5, 9, 30, 120],
+	"alienboi": [5, 12, 40, 250],
+	"strangerock" : [5, 11, 60, 350],
+	"smileyboi" : [5, 9, 30, 120],
+	"strugglepot" : [5, 8, 35, 300],
+	"stitchy" : [5, 8, 35, 300],
+	"ice" : [5, 9, 40, 130],
+	"rainbowshine" : [5, 16, 250, 250],
+	"boomboi": [5, 17, 45, 200],
+	"coffeebiote": [5, 17, 45, 200]
 }
 
 

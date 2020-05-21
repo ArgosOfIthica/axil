@@ -22,6 +22,9 @@ func _ready():
 	$Planet2.unlocked_image = 'res://assets/planets/Planet_Lava.png'
 	$Planet3.unlocked_image = 'res://assets/planets/Planet_03.png'
 	$Planet1.locked = false
+	$Planet2.locked = false
+	$Planet3.locked = false
+	
 	hide_all()
 	planets = [$Planet1, $Planet2, $Planet3]
 	for planet in range(len(planets)):

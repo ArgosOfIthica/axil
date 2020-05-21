@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Spaceship.gd" type="Script" id=1]
 [ext_resource path="res://Pots.tscn" type="PackedScene" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://assets/background/spaceship_stars2.png" type="Texture" id=11]
 [ext_resource path="res://assets/background/spaceship_stars1.png" type="Texture" id=12]
 [ext_resource path="res://assets/background/spaceship_stars3.png" type="Texture" id=13]
+[ext_resource path="res://assets/icons/blinkingOff.png" type="Texture" id=15]
+[ext_resource path="res://assets/icons/blinkingOn.png" type="Texture" id=16]
 
 [sub_resource type="ImageTexture" id=1]
 
@@ -56,6 +58,30 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("blink1:position")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17, 17.5, 18, 18.5, 19, 19.5, 20, 20.5, 21, 21.5, 22, 22.5, 23, 23.5, 24, 24.5, 25, 25.5, 26, 26.5, 27, 27.5, 28, 28.5, 29, 29.5, 30, 30.5, 31, 31.5, 32, 32.5, 33, 33.5, 34, 34.5, 35, 35.5, 36, 36.5, 37, 37.5, 38, 38.5, 39, 39.5, 40, 40.5, 41, 41.5, 42, 42.5, 43, 43.5, 44, 44.5, 45, 45.5, 46, 46.5, 47, 47.5, 48, 48.5, 49, 49.5, 50 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("blink2:position")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17, 17.5, 18, 18.5, 19, 19.5, 20, 20.5, 21, 21.5, 22, 22.5, 23, 23.5, 24, 24.5, 25, 25.5, 26, 26.5, 27, 27.5, 28, 28.5, 29, 29.5, 30, 30.5, 31, 31.5, 32, 32.5, 33, 33.5, 34, 34.5, 35, 35.5, 36, 36.5, 37, 37.5, 38, 38.5, 39, 39.5, 40, 40.5, 41, 41.5, 42, 42.5, 43, 43.5, 44, 44.5, 45, 45.5, 46, 46.5, 47, 47.5, 48, 48.5, 49, 49.5, 50 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ), Vector2( 210, 650 ), Vector2( 210, 675 ) ]
+}
 
 [node name="Spaceship" type="Control"]
 script = ExtResource( 1 )
@@ -70,16 +96,16 @@ position = Vector2( 960, 640 )
 texture = ExtResource( 5 )
 
 [node name="stars1" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 960, 680 )
 texture = ExtResource( 12 )
 
 [node name="stars2" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 960, 680 )
 texture = ExtResource( 11 )
 
 [node name="stars3" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.488321 )
+modulate = Color( 1, 1, 1, 0.828853 )
 position = Vector2( 960, 680 )
 texture = ExtResource( 13 )
 
@@ -145,6 +171,16 @@ texture_normal = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="blink1" type="Sprite" parent="."]
+position = Vector2( 210, 675 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 16 )
+
+[node name="blink2" type="Sprite" parent="."]
+position = Vector2( 210, 650 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 15 )
 
 [node name="BG_Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )

@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Choose.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Spaceship.tscn" type="PackedScene" id=3]
 [ext_resource path="res://PlantFactory.gd" type="Script" id=4]
 [ext_resource path="res://Map.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Tutorial.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Encyclopedia.tscn" type="PackedScene" id=7]
 [ext_resource path="res://TitleScreen.tscn" type="PackedScene" id=8]
 
@@ -30,6 +31,8 @@ script = ExtResource( 4 )
 [node name="Map" parent="." instance=ExtResource( 5 )]
 
 [node name="TitleScreen" parent="." instance=ExtResource( 8 )]
+
+[node name="Tutorial" parent="." instance=ExtResource( 6 )]
 [connection signal="new_frame" from="." to="Spaceship" method="_on_Main_new_frame"]
 [connection signal="choose_plant" from="Choose" to="." method="_CHOOSE_choose_plant"]
 [connection signal="open_encyclopedia" from="Spaceship" to="." method="_on_Spaceship_open_encyclopedia"]

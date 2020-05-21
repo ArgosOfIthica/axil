@@ -7,12 +7,6 @@ var opening_scene = "spaceship"
 
 func _ready():
 	$TitleScreen.goto_titlescreen()
-	#choose_opening()
-	##load_game()
-	##if opening_scene == "choose":
-	##	choose_opening()
-	##else:
-	##	to_spaceship()
 
 func choose_opening():
 	$Choose.choices[0] = instantiate_plant("water")
@@ -56,7 +50,10 @@ func load_game():
 func to_spaceship():
 	save_game()
 	$Spaceship.goto_spaceship()
-	
+
+func to_tutorial():
+	$Tutorial.goto_intro()
+
 func to_map():
 	save_game()
 	$Map.goto_map()
@@ -93,3 +90,4 @@ func _on_Encyclopedia_open_spaceship():
 
 func _on_TitleScreen_open_spaceship():
 	to_spaceship()
+	to_tutorial()

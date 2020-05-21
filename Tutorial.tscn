@@ -1,0 +1,324 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://assets/fonts/oswald/Oswald-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/icons/next.png" type="Texture" id=3]
+[ext_resource path="res://assets/background/choose_text_box.png" type="Texture" id=4]
+[ext_resource path="res://assets/icons/tutorialarrow.png" type="Texture" id=5]
+[ext_resource path="res://Tutorial.gd" type="Script" id=6]
+[ext_resource path="res://assets/icons/nextbutton.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=8]
+size = 75
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "point seed"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("arrow0:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 285, 425 ), Vector2( 340, 425 ), Vector2( 285, 425 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("arrow0:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "pointEncyclopedia"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("arrow0:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1660, 100 ), Vector2( 1600, 100 ), Vector2( 1660, 100 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("arrow0:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 180.0 ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("arrow0:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1660, 515 ), Vector2( 1600, 515 ), Vector2( 1660, 515 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("arrow0:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 180.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("arrow0:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1660, 300 ), Vector2( 1600, 300 ), Vector2( 1660, 300 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("arrow0:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 180.0 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "pointWaterNutrient"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("arrow0:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 285, 250 ), Vector2( 285, 100 ), Vector2( 285, 250 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("arrow0:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="DynamicFont" id=7]
+size = 85
+font_data = ExtResource( 1 )
+
+[node name="Tutorial" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="howto_textbox" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0.831373 )
+position = Vector2( 970, 130 )
+scale = Vector2( 0.75, 1.75 )
+texture = ExtResource( 4 )
+
+[node name="howto_text" type="Label" parent="."]
+margin_left = 306.0
+margin_top = 31.0
+margin_right = 1628.0
+margin_bottom = 240.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.470588, 0.94902, 0.643137, 1 )
+text = "This is the horticulture deck, 
+where you grow and care for specimens."
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="close" type="TextureButton" parent="."]
+margin_left = 1571.25
+margin_top = 914.15
+margin_right = 1908.25
+margin_bottom = 1061.15
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="howto_next0" type="TextureButton" parent="."]
+margin_left = 1571.25
+margin_top = 914.15
+margin_right = 1908.25
+margin_bottom = 1061.15
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="howto_next1" type="TextureButton" parent="."]
+margin_left = 1571.25
+margin_top = 914.15
+margin_right = 1908.25
+margin_bottom = 1061.15
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="howto_next1a" type="TextureButton" parent="."]
+margin_left = 1571.25
+margin_top = 914.15
+margin_right = 1908.25
+margin_bottom = 1061.15
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="howto_next2" type="TextureButton" parent="."]
+margin_left = 1571.25
+margin_top = 914.15
+margin_right = 1908.25
+margin_bottom = 1061.15
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="howto_next3" type="TextureButton" parent="."]
+margin_left = 1571.25
+margin_top = 914.15
+margin_right = 1908.25
+margin_bottom = 1061.15
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="howto_next4" type="TextureButton" parent="."]
+margin_left = 1571.25
+margin_top = 914.15
+margin_right = 1908.25
+margin_bottom = 1061.15
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="howto_next4a" type="TextureButton" parent="."]
+margin_left = 1571.25
+margin_top = 914.15
+margin_right = 1908.25
+margin_bottom = 1061.15
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="arrow0" type="Sprite" parent="."]
+modulate = Color( 0, 1, 0.623529, 1 )
+position = Vector2( 285, 250 )
+scale = Vector2( 0.75, 0.5 )
+texture = ExtResource( 5 )
+
+[node name="pointAnimated" type="AnimationPlayer" parent="."]
+"anims/point seed" = SubResource( 2 )
+anims/pointEncyclopedia = SubResource( 9 )
+anims/pointMap = SubResource( 10 )
+anims/pointSend = SubResource( 5 )
+anims/pointWaterNutrient = SubResource( 6 )
+
+[node name="textboxIntro" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.827451 )
+position = Vector2( 965.562, 504.47 )
+scale = Vector2( 1, 8 )
+texture = ExtResource( 4 )
+
+[node name="nextIntro" type="TextureButton" parent="."]
+margin_left = 682.802
+margin_top = 780.803
+margin_right = 1019.8
+margin_bottom = 927.803
+rect_scale = Vector2( 1.75, 1.75 )
+texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="textIntro" type="Label" parent="."]
+margin_left = 297.459
+margin_top = 55.5736
+margin_right = 1641.46
+margin_bottom = 885.573
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.32549, 1, 0.647059, 1 )
+text = "Greetings, Commander! 
+Welcome aboard the S.S. Axil.
+This is Cosmos speaking,
+ your A.I. guide to help you on your mission to collect extraterrestrial plant specimens to grow and send back to Earth."
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="howto_next0" to="." method="_on_howto_next0_pressed"]
+[connection signal="pressed" from="howto_next1" to="." method="_on_howto_next1_pressed"]
+[connection signal="pressed" from="howto_next1a" to="." method="_on_howto_next1a_pressed"]
+[connection signal="pressed" from="howto_next2" to="." method="_on_howto_next2_pressed"]
+[connection signal="pressed" from="howto_next3" to="." method="_on_howto_next3_pressed"]
+[connection signal="pressed" from="howto_next4" to="." method="_on_howto_next4_pressed"]
+[connection signal="pressed" from="howto_next4a" to="." method="_on_howto_next4a_pressed"]
+[connection signal="pressed" from="nextIntro" to="." method="_on_nextIntro_pressed"]

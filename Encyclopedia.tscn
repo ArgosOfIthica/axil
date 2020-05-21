@@ -1,10 +1,10 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/fonts/nothing_you_could_do/NothingYouCouldDo-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/background/journal_asset.png" type="Texture" id=2]
+[ext_resource path="res://assets/audio/magic_scout_cottages/magic-scout-cottages-by-kevin-macleod-from-filmmusic-io.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/icons/arrow.png" type="Texture" id=4]
 [ext_resource path="res://Encyclopedia.gd" type="Script" id=5]
-[ext_resource path="res://assets/audio/pamgaea/pamgaea-by-kevin-macleod-from-filmmusic-io.wav" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -22,19 +22,11 @@ font_data = ExtResource( 1 )
 size = 50
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=8]
-size = 50
-font_data = ExtResource( 1 )
-
 [sub_resource type="DynamicFont" id=5]
 size = 50
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=6]
-size = 50
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=7]
 size = 50
 font_data = ExtResource( 1 )
 
@@ -88,7 +80,6 @@ margin_right = 1555.0
 margin_bottom = 217.0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "unknown"
 
 [node name="water" type="Label" parent="."]
 margin_left = 1175.0
@@ -97,7 +88,6 @@ margin_right = 1501.0
 margin_bottom = 282.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "unknown"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -107,43 +97,18 @@ margin_left = 1250.0
 margin_top = 290.0
 margin_right = 1455.0
 margin_bottom = 357.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "unknown"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="fact1" type="Label" parent="."]
 margin_left = 990.0
-margin_top = 450.0
-margin_right = 1690.0
-margin_bottom = 600.0
-custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="fact2" type="Label" parent="."]
-margin_left = 990.0
-margin_top = 625.0
-margin_right = 1690.0
-margin_bottom = 775.0
+margin_top = 425.0
+margin_right = 1705.0
+margin_bottom = 575.0
 custom_fonts/font = SubResource( 6 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="fact3" type="Label" parent="."]
-margin_left = 990.0
-margin_top = 800.0
-margin_right = 1690.0
-margin_bottom = 950.0
-custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 autowrap = true
 __meta__ = {
@@ -168,10 +133,11 @@ __meta__ = {
 }
 
 [node name="turn_page_back" type="TextureButton" parent="."]
-margin_left = 17.6724
-margin_top = 551.059
-margin_right = 314.672
-margin_bottom = 741.059
+modulate = Color( 0.0901961, 0.298039, 0.921569, 1 )
+margin_left = -3.68939
+margin_top = 552.839
+margin_right = 293.311
+margin_bottom = 742.839
 rect_scale = Vector2( 0.75, 0.5 )
 texture_normal = ExtResource( 4 )
 __meta__ = {
@@ -179,10 +145,11 @@ __meta__ = {
 }
 
 [node name="turn_page_forward" type="TextureButton" parent="."]
-margin_left = 1892.56
-margin_top = 653.88
-margin_right = 2189.56
-margin_bottom = 843.88
+modulate = Color( 0.0901961, 0.298039, 0.921569, 1 )
+margin_left = 1908.58
+margin_top = 632.518
+margin_right = 2205.58
+margin_bottom = 822.518
 rect_rotation = 180.0
 rect_scale = Vector2( 0.75, 0.5 )
 texture_normal = ExtResource( 4 )
@@ -191,7 +158,7 @@ __meta__ = {
 }
 
 [node name="BG_Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
+stream = ExtResource( 3 )
 volume_db = -25.0
 [connection signal="pressed" from="backbutton" to="." method="_on_backbutton_pressed"]
 [connection signal="pressed" from="turn_page_back" to="." method="_on_turn_page_back_pressed"]
