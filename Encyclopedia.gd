@@ -64,7 +64,7 @@ const notes = {
 	"strugglepot" : ["it’s really, really trying its best", "can radiate a feeling of uncertainty and worry if in a bad mood", "will dance a little when happy, bouncing its pots left and right"],
 	"stitchy" : ["when in a good mood, will patch up any holes in clothes!", "when bored, keep a safe distance; specimen gets a bit stabby", "the thread produced by it is extremely durable!"],
 	"ice" : ["it doesn't seem to melt at any temperature (I’ve tried)", "found in the ice caves of the desolate tundra", "use of thick gloves is necessary to avoid frostbite when interacting with this plant"],
-	"rainbowshine": ["scent seems to be ever changing; one moment it smells of the darkest berries and the next it is the brightest citrus", "skin of this plant twinkles like the stars", "found on the high mountains, where the ground meets the sky"],
+	"rainbowshine": ["scent is always changing; one moment it smells of the darkest berries and the next it is the brightest citrus", "skin twinkles like the stars", "found on the high mountains, where the ground meets the sky"],
 	"boomboi": ["smells a lot like gunpowder and iron", "the comical bomb-like sprout grows in size until bloom", "speaking of which.. can be dangerous when it blooms (watch out for flying debris)"],
 	"coffeebiote": ["grows emotionally attached to cups", "the limbs of this plant are extremely soft!", "it loves to tickle… everything"]
 	}
@@ -99,11 +99,12 @@ var collectedplants = []
 func set_page(page_num):
 	if (collectedplants.empty() == false):
 		var species = collectedplants[page_num]
+		$plant_completion.text = str(page_num+1) + "/22"
 		$sketch.set_texture(load("res://assets/plants/" + collectedplants[page_num] + '/sketch.png'))
 		$name.text = names[species]
 		var plantinfo_route = get_parent().get_child(2)
-		$nutrient.text = "every " + str(plantinfo_route.nutrients_dict[species]*10) + " seconds" #will be hours in mobil ver
-		$water.text = "every " + str(plantinfo_route.water_dict[species]*10) + " seconds" #will be hours in mobil ver
+		#$origin.text = "every " + str(plantinfo_route.nutrients_dict[species]*10) + " seconds" 
+		#$rarity.text = "every " + str(plantinfo_route.water_dict[species]*10) + " seconds" 
 		if(plantinfo_route.growth_intervals[species][2] <= 150):
 			$growthrate.text = "Quick"
 		elif(plantinfo_route.growth_intervals[species][2] >= 275):
@@ -112,12 +113,16 @@ func set_page(page_num):
 			$growthrate.text = "Average"
 		if(counter[species] >= 2):
 			$fact1.text = "• " + notes[species][0]
+			$percent_complete.text = "50%"
 		else:
 			$fact1.text = " "
+			$percent_complete.text = "25%"
 		if(counter[species] >= 3):
 			$fact1.text += " \n• " + notes[species][1]
+			$percent_complete.text = "75%"
 		if(counter[species] >= 4):
 			$fact1.text += " \n• " + notes[species][2]
+			$percent_complete.text = "100%"
 
 
 

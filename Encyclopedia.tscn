@@ -1,34 +1,38 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://assets/fonts/nothing_you_could_do/NothingYouCouldDo-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/background/journal_asset.png" type="Texture" id=2]
 [ext_resource path="res://assets/audio/magic_scout_cottages/magic-scout-cottages-by-kevin-macleod-from-filmmusic-io.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/icons/arrow.png" type="Texture" id=4]
 [ext_resource path="res://Encyclopedia.gd" type="Script" id=5]
+[ext_resource path="res://assets/fonts/caveat/Caveat-Regular.ttf" type="DynamicFontData" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
-font_data = ExtResource( 1 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 50
-font_data = ExtResource( 1 )
+size = 60
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 50
-font_data = ExtResource( 1 )
+size = 60
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 50
-font_data = ExtResource( 1 )
+size = 60
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 50
-font_data = ExtResource( 1 )
+size = 60
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=6]
-size = 50
-font_data = ExtResource( 1 )
+size = 60
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 70
+font_data = ExtResource( 6 )
 
 [node name="Encyclopedia" type="Control"]
 margin_right = 40.0
@@ -52,6 +56,7 @@ margin_right = 914.0
 margin_bottom = 275.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Swag"
 align = 1
 autowrap = true
 __meta__ = {
@@ -59,57 +64,63 @@ __meta__ = {
 }
 
 [node name="basicinfo" type="Label" parent="."]
-margin_left = 994.479
-margin_top = 149.413
-margin_right = 1723.48
-margin_bottom = 506.413
+margin_left = 1002.9
+margin_top = 116.957
+margin_right = 1680.9
+margin_bottom = 473.957
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Growth Rate: 
-Water: 
-Nutrients: 
+Origin:
+Rarity:
 Notes:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="growthrate" type="Label" parent="."]
-margin_left = 1350.0
-margin_top = 150.0
-margin_right = 1555.0
-margin_bottom = 217.0
+margin_left = 1300.16
+margin_top = 117.957
+margin_right = 1563.16
+margin_bottom = 195.957
 custom_fonts/font = SubResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-
-[node name="water" type="Label" parent="."]
-margin_left = 1175.0
-margin_top = 215.0
-margin_right = 1501.0
-margin_bottom = 282.0
-custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 0.686275 )
+text = "very quick"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="nutrient" type="Label" parent="."]
-margin_left = 1250.0
-margin_top = 290.0
-margin_right = 1455.0
-margin_bottom = 357.0
+[node name="origin" type="Label" parent="."]
+margin_left = 1157.2
+margin_top = 198.979
+margin_right = 1483.2
+margin_bottom = 294.979
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 0.686275 )
+text = "unknown"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="rarity" type="Label" parent="."]
+margin_left = 1162.77
+margin_top = 275.759
+margin_right = 1367.77
+margin_bottom = 351.759
 custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 0.686275 )
+text = "unknown"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="fact1" type="Label" parent="."]
-margin_left = 990.0
-margin_top = 425.0
-margin_right = 1705.0
-margin_bottom = 575.0
+margin_left = 1010.0
+margin_top = 419.539
+margin_right = 1683.0
+margin_bottom = 569.539
 custom_fonts/font = SubResource( 6 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 0.686275 )
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -124,9 +135,37 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="plant_completion" type="Label" parent="."]
+margin_left = 194.036
+margin_top = 907.877
+margin_right = 313.036
+margin_bottom = 996.877
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1/22"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="percent_complete" type="Label" parent="."]
+margin_left = 199.377
+margin_top = 829.551
+margin_right = 318.377
+margin_bottom = 918.551
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0%"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="backbutton" type="TextureButton" parent="."]
-margin_right = 304.0
-margin_bottom = 198.0
+margin_left = -21.3618
+margin_top = -17.8015
+margin_right = 282.638
+margin_bottom = 180.198
 texture_normal = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
